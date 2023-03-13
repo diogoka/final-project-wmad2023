@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "chikaraEN-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+*, body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "chikaraEN-Regular", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 40% 33% 25%;
+  position: relative;
+  background-color: #00040D;
+  height: 100vh;
+  width: 20vw;
+}
+header button {
+  background-color: #00040D;
+  border: none;
+  color: #FAFAFA;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+header .logo {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header .socialMedia i {
+  font-size: 2rem;
+}
+
+main {
+  position: relative;
+  background-color: #FAFAFA;
+}
+main .bar {
+  position: relative;
+  height: 50%;
+  display: grid;
+  grid-template-rows: repeat(3, 33%);
+  grid-template-columns: repeat(3, 33%);
+  grid-template-areas: "JP menu menu" "JP EN B3" "JP EN C3";
+}
+main .bar h1 {
+  font-family: "brat", sans-serif;
+  position: relative;
+  font-size: 4rem;
+  grid-area: menu;
+  padding-left: 15%;
+  display: grid;
+  align-content: end;
+  padding-top: 17%;
+}
+main .bar p {
+  position: relative;
+  line-height: 2rem;
+}
+main .bar .englishBarExplanation {
+  grid-area: EN;
+  margin-top: 2%;
+  text-align: justify;
+  padding-top: 8%;
+}
+main .bar .japaneseBarExplanation {
+  font-family: "chikaraJP-Regular", sans-serif;
+  width: 40%;
+  grid-area: JP;
+  padding-left: 18%;
+  display: grid;
+  text-align: justify;
+  align-content: center;
+}
+main .bar::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/menubackgroundTEMP.jpg");
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-size: cover;
+  opacity: 0.5;
+}/*# sourceMappingURL=main.css.map */
