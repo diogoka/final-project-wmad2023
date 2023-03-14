@@ -22,6 +22,10 @@
   font-family: "numberHandWriting";
   src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
 }
+@font-face {
+  font-family: "japaneseHandWriting";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+}
 *,
 body {
   margin: 0;
@@ -160,6 +164,7 @@ main .line {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1%;
 }
 main .listPlates {
   padding-top: 3rem;
@@ -203,13 +208,18 @@ main .plateInfo .plateImage {
   justify-content: center;
 }
 main .plateInfo .plateDescription {
+  display: grid;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 5;
+  width: 80%;
 }
 main .plateInfo .plateIngredients {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 4;
+  margin-top: 1%;
+  padding-left: 8%;
+  font-size: 0.8rem;
 }
 main .plateInfo .platePrice {
   grid-row-start: 3;
@@ -223,6 +233,7 @@ main .plateInfo .platePrice {
 main .plateInfo .platePrice h2 {
   font-family: "numberHandWriting", sans-serif;
   font-size: 5rem;
+  color: #00308F;
 }
 main .plateInfo .platePrice p {
   color: red;
@@ -236,7 +247,38 @@ main .plateInfo .plateJapanese {
 }
 main .plateInfo .plateJapanese p {
   font-family: "chikaraJP-Regular", sans-serif;
-  font-size: 6rem;
+  font-size: 5rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
+}
+main #miso .plateJapanese p {
+  color: #9F705A;
+}
+main #darkMiso .plateJapanese p {
+  font-size: 3.6rem;
+}
+main #spicyMiso .platePrice ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+main #spicyMiso .platePrice ul li {
+  list-style: none;
+}
+main #spicyMiso .platePrice ul li h3 {
+  padding-bottom: 5%;
+}
+main #spicyMiso .platePrice ul li p {
+  padding-top: 2%;
+}
+main #spicyMiso .platePrice ul li h2 {
+  font-size: 3rem;
+}
+main #spicyMiso .plateJapanese {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding-bottom: 50%;
+}
+main #spicyMiso .plateJapanese p {
+  font-size: 4rem;
 }/*# sourceMappingURL=main.css.map */
