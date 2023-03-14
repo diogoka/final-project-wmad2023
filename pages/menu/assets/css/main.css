@@ -353,11 +353,49 @@ main .extraTopings .topings .toping .topingPrice p {
 main .giozaChasuBits {
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  padding-left: 5%;
 }
-main .giozaChasuBits .gioza, main .giozaChasuBits .chasuBits {
+main .giozaChasuBits .gioza,
+main .giozaChasuBits .chasuBits {
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
+main .giozaChasuBits .gioza .giozaInfo h1,
+main .giozaChasuBits .gioza .chasuInfo h1,
+main .giozaChasuBits .chasuBits .giozaInfo h1,
+main .giozaChasuBits .chasuBits .chasuInfo h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+}
+main .giozaChasuBits .gioza .giozaInfo .descriptionGiozaChasu,
+main .giozaChasuBits .gioza .chasuInfo .descriptionGiozaChasu,
+main .giozaChasuBits .chasuBits .giozaInfo .descriptionGiozaChasu,
+main .giozaChasuBits .chasuBits .chasuInfo .descriptionGiozaChasu {
+  font-size: 1.3rem;
+}
+main .giozaChasuBits .gioza .giozaInfo .priceGiozaChasu,
+main .giozaChasuBits .gioza .chasuInfo .priceGiozaChasu,
+main .giozaChasuBits .chasuBits .giozaInfo .priceGiozaChasu,
+main .giozaChasuBits .chasuBits .chasuInfo .priceGiozaChasu {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .giozaChasuBits .gioza .giozaInfo p,
+main .giozaChasuBits .gioza .chasuInfo p,
+main .giozaChasuBits .chasuBits .giozaInfo p,
+main .giozaChasuBits .chasuBits .chasuInfo p {
+  color: red;
+}
+main .giozaChasuBits .gioza .priceAndDescription,
+main .giozaChasuBits .chasuBits .priceAndDescription {
+  padding-top: 8%;
+  padding-left: 6%;
+}
 main .giozaChasuBits img {
-  width: 30%;
+  padding-top: 5%;
+  width: 60%;
+}
+main .giozaChasuBits .chasuBitsImg {
+  width: 80%;
 }/*# sourceMappingURL=main.css.map */

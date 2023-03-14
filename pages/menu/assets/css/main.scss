@@ -127,6 +127,7 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+
             h1 {
                 font-family: $font-main-JP-handwriting;
                 position: relative;
@@ -290,7 +291,7 @@ main {
             h2 {
                 font-family: $font-main-NUM-handwriting;
                 font-size: 5rem;
-                color:#00308F;
+                color: #00308F;
             }
 
             p {
@@ -314,65 +315,71 @@ main {
         }
     }
 
-    #miso{
-        .plateJapanese{
-            p{
-                color:#9F705A;
+    #miso {
+        .plateJapanese {
+            p {
+                color: #9F705A;
             }
         }
     }
 
-    #darkMiso{
-        .plateJapanese{
-            p{
+    #darkMiso {
+        .plateJapanese {
+            p {
                 font-size: 3.6rem;
             }
         }
     }
 
-    #spicyMiso{
-        .platePrice{
-            ul{
+    #spicyMiso {
+        .platePrice {
+            ul {
                 display: flex;
                 flex-direction: column;
                 gap: 0.4rem;
-                li{
+
+                li {
                     list-style: none;
-                    h3{
+
+                    h3 {
                         padding-bottom: 5%;
                     }
-                    p{
+
+                    p {
                         padding-top: 2%;
                     }
-                    h2{
+
+                    h2 {
                         font-size: 3rem;
                     }
                 }
             }
         }
 
-        .plateJapanese{
+        .plateJapanese {
             grid-row-start: 1;
             grid-row-end: 3;
             padding-bottom: 50%;
-            p{
+
+            p {
                 font-size: 4rem;
             }
         }
     }
 
-    .extraTopings{
+    .extraTopings {
         display: grid;
         grid-template-rows: 10% 90%;
         grid-template-areas:
-                        "title"
-                        "info";
+            "title"
+            "info";
         row-gap: 10%;
         padding-bottom: 10%;
 
-        .extraTopingsTitle{
+        .extraTopingsTitle {
             grid-area: title;
-            h1{
+
+            h1 {
                 font-family: $font-main-JP-handwriting;
                 font-size: 4rem;
                 padding-left: 5%;
@@ -380,7 +387,7 @@ main {
             }
         }
 
-        .topings{
+        .topings {
             grid-area: info;
             display: grid;
             align-items: center;
@@ -388,7 +395,7 @@ main {
             grid-template-columns: repeat(2, 50%);
             row-gap: 4%;
 
-            #pork{
+            #pork {
                 display: grid;
                 grid-template-columns: repeat(2, 20%);
                 align-items: center;
@@ -396,35 +403,40 @@ main {
                 grid-column: span 2;
             }
 
-            .toping{
+            .toping {
                 display: grid;
                 grid-template-columns: repeat(2, 35%);
                 grid-template-rows: repeat(3, 22%);
                 grid-template-areas:
-                                "title title"
-                                "price img"
-                                "price img";
+                    "title title"
+                    "price img"
+                    "price img";
                 align-items: center;
                 justify-content: center;
-                h1{
+
+                h1 {
                     grid-area: title;
                     font-size: 1.3rem;
                 }
-                .topingImage{
+
+                .topingImage {
                     grid-area: img;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
-                .topingPrice{
+
+                .topingPrice {
                     grid-area: price;
-                    h2{
+
+                    h2 {
                         font-family: $font-main-NUM-handwriting;
                         font-size: 2rem;
-                        color:#00308F;
+                        color: #00308F;
                     }
+
                     p {
-                    color: red;
+                        color: red;
                     }
                 }
             }
@@ -432,18 +444,51 @@ main {
     }
 
 
-    .giozaChasuBits{
+    .giozaChasuBits {
         display: grid;
-        grid-template-columns: repeat(2,50%);
+        grid-template-columns: repeat(2, 50%);
+        padding-left: 5%;
 
-        .gioza, .chasuBits{
+        .gioza,
+        .chasuBits {
             display: grid;
-            grid-template-columns: repeat(2,50%);
+            grid-template-columns: repeat(2, 50%);
+
+            .giozaInfo,
+            .chasuInfo {
+                h1 {
+                    font-family: $font-main-JP-handwriting;
+                    font-size: 4rem;
+                }
+
+                .descriptionGiozaChasu {
+                    font-size: 1.3rem;
+                }
+
+                .priceGiozaChasu {
+                    font-family: $font-main-NUM-handwriting;
+                    font-size: 2rem;
+                    color: #00308F;
+                }
+
+                p {
+                    color: red;
+                }
+            }
+
+            .priceAndDescription{
+                padding-top: 8%;   
+                padding-left: 6%;
+            }
+
+        }
+        img {
+            padding-top: 5%;
+            width: 60%;
         }
 
-
-        img{
-            width: 30%;
+        .chasuBitsImg{
+            width: 80%;
         }
     }
 

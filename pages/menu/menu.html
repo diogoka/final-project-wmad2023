@@ -49,7 +49,7 @@
                 <li><button type="button" onclick="window.location.href='#umami';">Umami</button></li>
                 <li><button type="button" onclick="window.location.href='#tanrei';">Tanrei Shio</button></li>
                 <li><button type="button" onclick="window.location.href='#extraTopings';">Extra topings</button></li>
-                <li><button type="button" onclick="window.location.href='#shoyu';">Gioza/Chasu Bits</button></li>
+                <li><button type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button></li>
                 <li><button type="button" onclick="window.location.href='#shoyu';">Beverages (alcoholic and non)</button></li>
             </ul>
         </div>
@@ -315,21 +315,23 @@
         <div class="line">
             <hr class="division">
         </div>
-        <div class="giozaChasuBits">
+        <div class="giozaChasuBits" id="giozaChasuBits">
             <div class="gioza">
                 <div class="giozaInfo">
                     <h1>Gioza</h1>
-                    <div class="regularGioza">
-                        <h2>Regular (pork, 5pc)</h2>
-                        <h2>$5.80</h2>
-                    </div>
-                    <div class="spicyGioza">
-                        <h2>Spicy (beef, 5pc)</h2>
-                        <h2>$6.00</h2>
-                    </div>
-                    <div class="halfGioza">
-                        <h2>Regular (half/half, 6pc)</h2>
-                        <h2>$6.80</h2>
+                    <div class="priceAndDescription">
+                        <div class="regularGioza">
+                            <h2 class="descriptionGiozaChasu">Regular (pork, 5pc)</h2>
+                            <h2 class="priceGiozaChasu">$5.80</h2>
+                        </div>
+                        <div class="spicyGioza">
+                            <h2 class="descriptionGiozaChasu">Spicy (beef, 5pc)</h2>
+                            <h2 class="priceGiozaChasu">$6.00</h2>
+                        </div>
+                        <div class="halfGioza">
+                            <h2 class="descriptionGiozaChasu">Regular (half/half, 6pc)</h2>
+                            <h2 class="priceGiozaChasu">$6.80</h2>
+                        </div>
                     </div>
                 </div>
                 <div class="imageGioza">
@@ -339,14 +341,19 @@
             <div class="chasuBits">
                 <div class="chasuInfo">
                     <h1>Chasu Bits</h1>
-                    <h2>Diced Pork chasu for meat lovers</h2>
-                    <h2>$3.60</h2>
+                    <div class="priceAndDescription">
+                        <h2 class="descriptionGiozaChasu">Diced Pork chasu for meat lovers</h2>
+                        <h2 class="priceGiozaChasu">$3.60</h2>
+                    </div>
                 </div>
                 <div class="chasuImage">
-                    <img src="./assets/images/chasuBits.jpeg" alt="chasuBitsPicture">
+                    <img class="chasuBitsImg" src="./assets/images/chasuBits.jpeg" alt="chasuBitsPicture">
                 </div>
 
             </div>
+        </div>
+        <div class="line">
+            <hr class="division">
         </div>
 
 
