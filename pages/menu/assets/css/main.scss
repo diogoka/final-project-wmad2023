@@ -44,6 +44,10 @@ $font-main-JAP-handwriting: "japaneseHandWriting", sans-serif;
 $color-main: #00040d;
 $color-main-light: #fafafa;
 
+html {
+    scroll-behavior: smooth;
+}
+
 *,
 body {
     margin: 0;
@@ -54,7 +58,8 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 20vw 80vw;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "header menu";
 }
 
 header {
@@ -64,6 +69,7 @@ header {
     background-color: $color-main;
     height: 100vh;
     width: 20vw;
+    grid-area: header;
 
     button {
         background-color: $color-main;
@@ -80,6 +86,7 @@ header {
         flex-direction: column;
         gap: 3rem;
         align-items: center;
+        cursor: pointer;
     }
 
     .logo {
@@ -103,6 +110,7 @@ header {
 main {
     position: relative;
     background-color: $color-main-light;
+    grid-area: menu;
 
     .bar {
         position: relative;
@@ -119,18 +127,18 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            h1 {
+                font-family: $font-main-JP-handwriting;
+                position: relative;
+                font-size: 6rem;
+                grid-area: menu;
+                display: grid;
+                align-content: end;
+                justify-content: start;
+                padding-top: 22%;
+            }
         }
 
-        h1 {
-            font-family: $font-main-JP-handwriting;
-            position: relative;
-            font-size: 4rem;
-            grid-area: menu;
-            display: grid;
-            align-content: end;
-            justify-content: start;
-            padding-top: 17%;
-        }
 
         p {
             position: relative;
@@ -352,4 +360,93 @@ main {
             }
         }
     }
+
+    .extraTopings{
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+                        "title"
+                        "info";
+        row-gap: 10%;
+        padding-bottom: 10%;
+
+        .extraTopingsTitle{
+            grid-area: title;
+            h1{
+                font-family: $font-main-JP-handwriting;
+                font-size: 4rem;
+                padding-left: 5%;
+                padding-top: 3%;
+            }
+        }
+
+        .topings{
+            grid-area: info;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(2, 50%);
+            row-gap: 4%;
+
+            #pork{
+                display: grid;
+                grid-template-columns: repeat(2, 20%);
+                align-items: center;
+                justify-content: center;
+                grid-column: span 2;
+            }
+
+            .toping{
+                display: grid;
+                grid-template-columns: repeat(2, 35%);
+                grid-template-rows: repeat(3, 22%);
+                grid-template-areas:
+                                "title title"
+                                "price img"
+                                "price img";
+                align-items: center;
+                justify-content: center;
+                h1{
+                    grid-area: title;
+                    font-size: 1.3rem;
+                }
+                .topingImage{
+                    grid-area: img;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .topingPrice{
+                    grid-area: price;
+                    h2{
+                        font-family: $font-main-NUM-handwriting;
+                        font-size: 2rem;
+                        color:#00308F;
+                    }
+                    p {
+                    color: red;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .giozaChasuBits{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+
+        .gioza, .chasuBits{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+        }
+
+
+        img{
+            width: 30%;
+        }
+    }
+
+
+
 }

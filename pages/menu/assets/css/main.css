@@ -26,6 +26,10 @@
   font-family: "japaneseHandWriting";
   src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 body {
   margin: 0;
@@ -36,7 +40,8 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: 20vw 80vw;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "header menu";
 }
 
 header {
@@ -46,6 +51,7 @@ header {
   background-color: #00040d;
   height: 100vh;
   width: 20vw;
+  grid-area: header;
 }
 header button {
   background-color: #00040d;
@@ -61,6 +67,7 @@ header .buttons {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+  cursor: pointer;
 }
 header .logo {
   padding-top: 3.5rem;
@@ -80,6 +87,7 @@ header .socialMedia i {
 main {
   position: relative;
   background-color: #fafafa;
+  grid-area: menu;
 }
 main .bar {
   position: relative;
@@ -94,15 +102,15 @@ main .bar .menuTitle {
   align-items: center;
   justify-content: center;
 }
-main .bar h1 {
+main .bar .menuTitle h1 {
   font-family: "brat", sans-serif;
   position: relative;
-  font-size: 4rem;
+  font-size: 6rem;
   grid-area: menu;
   display: grid;
   align-content: end;
   justify-content: start;
-  padding-top: 17%;
+  padding-top: 22%;
 }
 main .bar p {
   position: relative;
@@ -281,4 +289,75 @@ main #spicyMiso .plateJapanese {
 }
 main #spicyMiso .plateJapanese p {
   font-size: 4rem;
+}
+main .extraTopings {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "title" "info";
+  row-gap: 10%;
+  padding-bottom: 10%;
+}
+main .extraTopings .extraTopingsTitle {
+  grid-area: title;
+}
+main .extraTopings .extraTopingsTitle h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+main .extraTopings .topings {
+  grid-area: info;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 4%;
+}
+main .extraTopings .topings #pork {
+  display: grid;
+  grid-template-columns: repeat(2, 20%);
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+}
+main .extraTopings .topings .toping {
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  grid-template-rows: repeat(3, 22%);
+  grid-template-areas: "title title" "price img" "price img";
+  align-items: center;
+  justify-content: center;
+}
+main .extraTopings .topings .toping h1 {
+  grid-area: title;
+  font-size: 1.3rem;
+}
+main .extraTopings .topings .toping .topingImage {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .extraTopings .topings .toping .topingPrice {
+  grid-area: price;
+}
+main .extraTopings .topings .toping .topingPrice h2 {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .extraTopings .topings .toping .topingPrice p {
+  color: red;
+}
+main .giozaChasuBits {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+main .giozaChasuBits .gioza, main .giozaChasuBits .chasuBits {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+main .giozaChasuBits img {
+  width: 30%;
 }/*# sourceMappingURL=main.css.map */
