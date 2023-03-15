@@ -120,6 +120,10 @@ header {
         gap: 3rem;
         align-items: center;
         cursor: pointer;
+
+        button:hover{
+            color: $price-color;
+        }
     }
 
     .logo {
@@ -227,9 +231,30 @@ main {
             text-align: center;
 
             button {
+                position: relative;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+
+            button:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: $color-main-light;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+
+            button:hover:after {
+                width: 100%;
+                left: 0;
             }
         }
     }
@@ -350,6 +375,14 @@ main {
         }
     }
 
+    #shoyu {
+        .plateJapanese {
+            p {
+                color: #C5C6D0;
+            }
+        }
+    }
+
     #miso {
         .plateJapanese {
             p {
@@ -361,6 +394,7 @@ main {
     #darkMiso {
         .plateJapanese {
             p {
+                color: #4D4C5C;
                 font-size: 3.6rem;
             }
         }
@@ -398,6 +432,23 @@ main {
 
             p {
                 font-size: 4rem;
+                color: #B90E0A;
+            }
+        }
+    }
+
+    #umami {
+        .plateJapanese {
+            p {
+                color: #C5C6D0;
+            }
+        }
+    }
+
+    #tanrei {
+        .plateJapanese {
+            p {
+                color: #318CE7;
             }
         }
     }
@@ -539,7 +590,7 @@ main {
             font-size: 4rem;
         }
 
-        .promotionBeerGrid{
+        .promotionBeerGrid {
             margin-bottom: 3%;
 
             .promotionGiozaBeer {
@@ -547,11 +598,11 @@ main {
                 grid-template-columns: repeat(3, 33%);
                 justify-content: center;
                 align-items: center;
-    
+
                 h2 {
                     font-size: 1.3rem;
                 }
-    
+
                 .discount {
                     display: flex;
                     flex-direction: column;
@@ -561,63 +612,63 @@ main {
                     padding: 1rem;
                     border: 1px solid #00040d;
                 }
-    
+
                 .image {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 5%;
-    
+
                     img:first-child {
                         width: 37%;
                     }
-    
+
                     img {
                         width: 25%;
                     }
-    
+
                     h1 {
                         font-size: 7rem;
                     }
                 }
-    
+
                 .gridPromotionPrice {
                     padding-right: 24%;
-    
+
                     .promotionPrice {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-    
+
                         h2 {
                             font-size: 1.3rem;
                         }
-    
+
                         #oldprice {
                             font-family: $font-main-NUM-handwriting;
                             color: $price-color;
                             text-decoration: line-through;
                             font-size: 2rem;
                         }
-    
+
                         #arrow {
                             display: inline-block;
                             font-family: $font-main-NUM-handwriting;
                             font-size: 4rem;
                             transform: rotate(90deg);
-    
+
                         }
-    
+
                         h2:last-child {
                             font-family: $font-main-NUM-handwriting;
                             font-size: 3rem;
                             color: red;
                         }
-    
+
                     }
                 }
-    
+
             }
         }
 

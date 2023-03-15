@@ -91,6 +91,9 @@ header .buttons {
   align-items: center;
   cursor: pointer;
 }
+header .buttons button:hover {
+  color: #00308F;
+}
 header .logo {
   padding-top: 3.5rem;
   display: flex;
@@ -181,9 +184,28 @@ main .buttonsMenu li {
   text-align: center;
 }
 main .buttonsMenu li button {
+  position: relative;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+main .buttonsMenu li button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fafafa;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+main .buttonsMenu li button:hover:after {
+  width: 100%;
+  left: 0;
 }
 main .division {
   margin-top: 4%;
@@ -283,10 +305,14 @@ main .plateInfo .plateJapanese p {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+main #shoyu .plateJapanese p {
+  color: #C5C6D0;
+}
 main #miso .plateJapanese p {
   color: #9F705A;
 }
 main #darkMiso .plateJapanese p {
+  color: #4D4C5C;
   font-size: 3.6rem;
 }
 main #spicyMiso .platePrice ul {
@@ -313,6 +339,13 @@ main #spicyMiso .plateJapanese {
 }
 main #spicyMiso .plateJapanese p {
   font-size: 4rem;
+  color: #B90E0A;
+}
+main #umami .plateJapanese p {
+  color: #C5C6D0;
+}
+main #tanrei .plateJapanese p {
+  color: #318CE7;
 }
 main .extraTopings {
   display: grid;
