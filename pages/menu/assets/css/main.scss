@@ -43,6 +43,8 @@ $font-main-JAP-handwriting: "japaneseHandWriting", sans-serif;
 
 $color-main: #00040d;
 $color-main-light: #fafafa;
+$price-color: #00308F;
+
 
 html {
     scroll-behavior: smooth;
@@ -54,18 +56,49 @@ body {
     padding: 0;
     font-size: 100%;
     font-family: $font-main-EN-regular;
+
 }
 
 body {
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: "header menu";
+    grid-template-columns: 20vw 80vw;
+    grid-template-areas:
+        "header menu"
+        "copyright copyright"
+    ;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: copyright;
+    background-color: $color-main;
+    color: $color-main-light;
+    height: 9vh;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    p {
+        // font-family: $font-main-NUM-handwriting;
+        font-family: $font-main-JP-handwriting;
+        font-size: 2.5rem;
+        padding-top: 4%;
+    }
+
+
 }
 
 header {
     display: grid;
     grid-template-rows: 40% 33% 25%;
-    position: relative;
+    position: fixed;
     background-color: $color-main;
     height: 100vh;
     width: 20vw;
@@ -127,11 +160,12 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: 7%;
 
             h1 {
                 font-family: $font-main-JP-handwriting;
                 position: relative;
-                font-size: 6rem;
+                font-size: 8rem;
                 grid-area: menu;
                 display: grid;
                 align-content: end;
@@ -155,12 +189,13 @@ main {
 
         .japaneseBarExplanation {
             font-family: $font-main-JP-regular;
-            width: 40%;
+            width: 30%;
             grid-area: JP;
             padding-left: 18%;
-            display: grid;
+            display: flex;
             text-align: justify;
-            align-content: center;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -291,7 +326,7 @@ main {
             h2 {
                 font-family: $font-main-NUM-handwriting;
                 font-size: 5rem;
-                color: #00308F;
+                color: $price-color;
             }
 
             p {
@@ -432,7 +467,7 @@ main {
                     h2 {
                         font-family: $font-main-NUM-handwriting;
                         font-size: 2rem;
-                        color: #00308F;
+                        color: $price-color;
                     }
 
                     p {
@@ -468,7 +503,7 @@ main {
                 .priceGiozaChasu {
                     font-family: $font-main-NUM-handwriting;
                     font-size: 2rem;
-                    color: #00308F;
+                    color: $price-color;
                 }
 
                 p {
@@ -476,22 +511,231 @@ main {
                 }
             }
 
-            .priceAndDescription{
-                padding-top: 8%;   
+            .priceAndDescription {
+                padding-top: 8%;
                 padding-left: 6%;
             }
 
         }
+
         img {
             padding-top: 5%;
             width: 60%;
         }
 
-        .chasuBitsImg{
+        .chasuBitsImg {
             width: 80%;
         }
     }
 
+    .beverages {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        background-color: $color-main-light;
+
+        h1 {
+            font-family: $font-main-JP-handwriting;
+            font-size: 4rem;
+        }
+
+        .promotionBeerGrid{
+            margin-bottom: 3%;
+
+            .promotionGiozaBeer {
+                display: grid;
+                grid-template-columns: repeat(3, 33%);
+                justify-content: center;
+                align-items: center;
+    
+                h2 {
+                    font-size: 1.3rem;
+                }
+    
+                .discount {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    justify-self: center;
+                    padding: 1rem;
+                    border: 1px solid #00040d;
+                }
+    
+                .image {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5%;
+    
+                    img:first-child {
+                        width: 37%;
+                    }
+    
+                    img {
+                        width: 25%;
+                    }
+    
+                    h1 {
+                        font-size: 7rem;
+                    }
+                }
+    
+                .gridPromotionPrice {
+                    padding-right: 24%;
+    
+                    .promotionPrice {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+    
+                        h2 {
+                            font-size: 1.3rem;
+                        }
+    
+                        #oldprice {
+                            font-family: $font-main-NUM-handwriting;
+                            color: $price-color;
+                            text-decoration: line-through;
+                            font-size: 2rem;
+                        }
+    
+                        #arrow {
+                            display: inline-block;
+                            font-family: $font-main-NUM-handwriting;
+                            font-size: 4rem;
+                            transform: rotate(90deg);
+    
+                        }
+    
+                        h2:last-child {
+                            font-family: $font-main-NUM-handwriting;
+                            font-size: 3rem;
+                            color: red;
+                        }
+    
+                    }
+                }
+    
+            }
+        }
+
+
+        .beerGrid {
+            display: grid;
+            grid-template-rows: 23% 62%;
+            margin-bottom: 3%;
+
+            .beers {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                height: 50%;
+
+                .beer {
+                    display: grid;
+                    grid-template-columns: 30% 10% 30%;
+                    justify-content: center;
+                    align-content: center;
+                    column-gap: 4%;
+
+                    #asahi {
+                        img {
+                            width: 53%;
+                        }
+                    }
+
+                    #acres {
+                        img {
+                            width: 48%;
+                        }
+                    }
+
+                    .beername,
+                    .price,
+                    .image {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .price {
+                        h2 {
+                            font-family: $font-main-NUM-handwriting;
+                            font-size: 2rem;
+                            color: $price-color;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .sakeGrid {
+            display: grid;
+            grid-template-rows: 25% 75%;
+
+            .sakeInfo {
+                display: grid;
+                grid-template-columns: 10% 90%;
+                justify-content: center;
+                align-content: center;
+                padding-left: 6%;
+                height: 50%;
+                margin-bottom: 8%;
+
+                .sizes {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+                .smallSize,
+                .largeSize {
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    display: flex;
+                    gap: 6%;
+
+                    h2:last-child {
+                        font-family: $font-main-NUM-handwriting;
+                        font-size: 2rem;
+                        color: $price-color;
+                    }
+                }
+
+            }
+
+        }
+
+        .nonAlcoholicGrid {
+            display: grid;
+            grid-template-rows: 35% 65%;
+
+            .softDrinks {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+
+                margin-bottom: 6%;
+
+                .softDrinkDescription {
+                    display: flex;
+                    align-items: center;
+                    gap: 6%;
+                    height: 53%;
+                    padding-left: 17%;
+
+                    h2:last-child {
+                        font-family: $font-main-NUM-handwriting;
+                        font-size: 2rem;
+                        color: $price-color;
+                    }
+                }
+            }
+        }
+
+    }
 
 
 }

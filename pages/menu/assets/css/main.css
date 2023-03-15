@@ -40,14 +40,36 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "header menu";
+  grid-template-columns: 20vw 80vw;
+  grid-template-areas: "header menu" "copyright copyright";
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: copyright;
+  background-color: #00040d;
+  color: #fafafa;
+  height: 9vh;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+footer p {
+  font-family: "brat", sans-serif;
+  font-size: 2.5rem;
+  padding-top: 4%;
 }
 
 header {
   display: grid;
   grid-template-rows: 40% 33% 25%;
-  position: relative;
+  position: fixed;
   background-color: #00040d;
   height: 100vh;
   width: 20vw;
@@ -101,11 +123,12 @@ main .bar .menuTitle {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 7%;
 }
 main .bar .menuTitle h1 {
   font-family: "brat", sans-serif;
   position: relative;
-  font-size: 6rem;
+  font-size: 8rem;
   grid-area: menu;
   display: grid;
   align-content: end;
@@ -124,12 +147,13 @@ main .bar .englishBarExplanation {
 }
 main .bar .japaneseBarExplanation {
   font-family: "chikaraJP-Regular", sans-serif;
-  width: 40%;
+  width: 30%;
   grid-area: JP;
   padding-left: 18%;
-  display: grid;
+  display: flex;
   text-align: justify;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 main .bar::before {
   content: "";
@@ -398,4 +422,168 @@ main .giozaChasuBits img {
 }
 main .giozaChasuBits .chasuBitsImg {
   width: 80%;
+}
+main .beverages {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  background-color: #fafafa;
+}
+main .beverages h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+}
+main .beverages .promotionBeerGrid {
+  margin-bottom: 3%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  justify-content: center;
+  align-items: center;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer h2 {
+  font-size: 1.3rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .discount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 1rem;
+  border: 1px solid #00040d;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image img:first-child {
+  width: 37%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image img {
+  width: 25%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image h1 {
+  font-size: 7rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice {
+  padding-right: 24%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice h2 {
+  font-size: 1.3rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #oldprice {
+  font-family: "numberHandWriting", sans-serif;
+  color: #00308F;
+  text-decoration: line-through;
+  font-size: 2rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #arrow {
+  display: inline-block;
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 4rem;
+  transform: rotate(90deg);
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 3rem;
+  color: red;
+}
+main .beverages .beerGrid {
+  display: grid;
+  grid-template-rows: 23% 62%;
+  margin-bottom: 3%;
+}
+main .beverages .beerGrid .beers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 50%;
+}
+main .beverages .beerGrid .beers .beer {
+  display: grid;
+  grid-template-columns: 30% 10% 30%;
+  justify-content: center;
+  align-content: center;
+  -moz-column-gap: 4%;
+       column-gap: 4%;
+}
+main .beverages .beerGrid .beers .beer #asahi img {
+  width: 53%;
+}
+main .beverages .beerGrid .beers .beer #acres img {
+  width: 48%;
+}
+main .beverages .beerGrid .beers .beer .beername,
+main .beverages .beerGrid .beers .beer .price,
+main .beverages .beerGrid .beers .beer .image {
+  display: flex;
+  align-items: center;
+}
+main .beverages .beerGrid .beers .beer .price h2 {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .beverages .sakeGrid {
+  display: grid;
+  grid-template-rows: 25% 75%;
+}
+main .beverages .sakeGrid .sakeInfo {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-content: center;
+  align-content: center;
+  padding-left: 6%;
+  height: 50%;
+  margin-bottom: 8%;
+}
+main .beverages .sakeGrid .sakeInfo .sizes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-content: center;
+}
+main .beverages .sakeGrid .sakeInfo .smallSize,
+main .beverages .sakeGrid .sakeInfo .largeSize {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  gap: 6%;
+}
+main .beverages .sakeGrid .sakeInfo .smallSize h2:last-child,
+main .beverages .sakeGrid .sakeInfo .largeSize h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .beverages .nonAlcoholicGrid {
+  display: grid;
+  grid-template-rows: 35% 65%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-bottom: 6%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  height: 53%;
+  padding-left: 17%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
 }/*# sourceMappingURL=main.css.map */

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.ico">
     <link rel="stylesheet" href="https://kit.fontawesome.com/4febbc7477.css" crossorigin="anonymous" type="text/css">
-    <title>Menu Page</title>
+    <title>Menu</title>
 </head>
 
 <body>
@@ -49,8 +49,10 @@
                 <li><button type="button" onclick="window.location.href='#umami';">Umami</button></li>
                 <li><button type="button" onclick="window.location.href='#tanrei';">Tanrei Shio</button></li>
                 <li><button type="button" onclick="window.location.href='#extraTopings';">Extra topings</button></li>
-                <li><button type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button></li>
-                <li><button type="button" onclick="window.location.href='#shoyu';">Beverages (alcoholic and non)</button></li>
+                <li><button type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button>
+                </li>
+                <li><button type="button" onclick="window.location.href='#shoyu';">Beverages (alcoholic and
+                        non)</button></li>
             </ul>
         </div>
         <div class="line">
@@ -149,14 +151,14 @@
                     <div class="platePrice">
                         <ul>
                             <li>
-                                <h3>Level 1 (normal spicy) 
+                                <h3>Level 1 (normal spicy)
                                     <i class="fa-solid fa-fire"></i>
                                 </h3>
                                 <h2>$14.80</h2>
                                 <p>*tax not included.</p>
                             </li>
                             <li>
-                                <h3>Level 2 (very spicy) 
+                                <h3>Level 2 (very spicy)
                                     <i class="fa-solid fa-fire"></i>
                                     <i class="fa-solid fa-fire"></i>
                                 </h3>
@@ -164,7 +166,7 @@
                                 <p>*tax not included.</p>
                             </li>
                             <li>
-                                <h3>Level 3 (super spicy) 
+                                <h3>Level 3 (super spicy)
                                     <i class="fa-solid fa-fire"></i>
                                     <i class="fa-solid fa-fire"></i>
                                     <i class="fa-solid fa-fire"></i>
@@ -306,12 +308,12 @@
                         <h2>$3.20</h2>
                         <p>*tax not included.</p>
                     </div>
-                    <div class="topingImage">   
+                    <div class="topingImage">
                         <img src="./assets/images/corn.jpeg" alt="topingCornPicture" class="topingImage">
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
         <div class="line">
             <hr class="division">
         </div>
@@ -355,11 +357,104 @@
         <div class="line">
             <hr class="division">
         </div>
-
-
+        <div class="beverages">
+            <h1>Beverages</h1>
+            <div class="promotionBeerGrid">
+                <div class="promotionGiozaBeer">
+                    <div class="discount">
+                        <h2>GYOZA
+                            <h2>(regular or spicy) </h2>
+                            <h2> + </h2>
+                            <h2> A bottle of beer</h2>
+                        </h2>
+                        <h3>30% off!</h3>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/images/gioza.jpeg" alt="giozaPicture">
+                        <h1>+</h1>
+                        <img src="./assets/images/33acres.png" alt="33acresPicture">
+                    </div>
+                    <div class="gridPromotionPrice">
+                        <div class="promotionPrice">
+                            <h2>Beer & Gioza</h2>
+                            <h2>Set!</h2>
+                            <h2 id="oldprice">$12.05</h2>
+                            <h2 id="arrow">-></h2>
+                            <h2>$8.90</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beerGrid">
+                <h1>Beer</h1>
+                <div class="beers">
+                    <div class="beer">
+                        <div class="beername">
+                            <h2>Asahi (lager) (355ml, Japan) </h2>
+                        </div>
+                        <div class="price">
+                            <h2>$6.25</h2>
+                        </div>
+                        <div class="beerImage" id="asahi">
+                            <img src="./assets/images/asahi.png" alt="asahiBeerPicture">
+                        </div>
+                    </div>
+                    <div class="beer">
+                        <div class="beername">
+                            <h2>33 Acres (pale ale) (355ml, Vancouver, BC) </h2>
+                        </div>
+                        <div class="price">
+                            <h2>$5.90</h2>
+                        </div>
+                        <div class="beerImage" id="acres">
+                            <img src="./assets/images/33acres.png" alt="33AcresBeerPicture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sakeGrid">
+                <h1>Sake</h1>
+                <div class="sakeInfo">
+                    <div class="sakeName">
+                        <h2>Fuki Takasago (Alc. 15%)</h2>
+                    </div>
+                    <div class="sizes">
+                        <div class="smallSize">
+                            <h2>150ml glass (chilled) </h2>
+                            <h2>$9.80</h2>
+                        </div>
+                        <div class="largeSize">
+                            <h2>200ml glass (chilled or hot)</h2>
+                            <h2>$11.80</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nonAlcoholicGrid">
+                <h1>Non Alcoholic</h1>
+                <div class="softDrinks">
+                    <div class="softDrinkDescription">
+                        <h2>Coke or Diet Coke</h2>
+                        <h2>$2.30</h2>
+                    </div>
+                    <div class="softDrinkDescription">
+                        <h2>Calpico</h2>
+                        <h2>$2.90</h2>
+                    </div>
+                    <div class="softDrinkDescription">
+                        <h2>hot Tea</h2>
+                        <h2>$1.00</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer>
+        <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
+    </footer>
 </body>
 
 
 <script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>
+
 </html>
