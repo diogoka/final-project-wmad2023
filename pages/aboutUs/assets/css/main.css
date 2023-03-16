@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "chikaraEN-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+@font-face {
+  font-family: "numberHandWriting";
+  src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+@font-face {
+  font-family: "japaneseHandWriting";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "chikaraEN-Regular", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-areas: "header menu" "copyright copyright";
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: copyright;
+  background-color: #00040d;
+  color: #fafafa;
+  height: 9vh;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+footer p {
+  font-family: "brat", sans-serif;
+  font-size: 2.5rem;
+  padding-top: 4%;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 40% 33% 25%;
+  position: fixed;
+  background-color: #00040d;
+  height: 100vh;
+  width: 20vw;
+  grid-area: header;
+}
+header button {
+  background-color: #00040d;
+  font-family: "brat", sans-serif;
+  border: none;
+  color: #fafafa;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  cursor: pointer;
+}
+header .buttons button:hover {
+  color: #00308F;
+}
+header .logo {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header .socialMedia i {
+  font-size: 2rem;
+}
+
+main {
+  position: relative;
+  background-color: #fafafa;
+  grid-area: menu;
+}
+main .bar {
+  position: relative;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: repeat(3, 33%);
+  grid-template-columns: repeat(3, 33%);
+  grid-template-areas: "JP menu menu" "JP EN B3" "JP EN C3";
+}
+main .bar .menuTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7%;
+}
+main .bar .menuTitle h1 {
+  font-family: "brat", sans-serif;
+  color: #fafafa;
+  position: relative;
+  font-size: 8rem;
+  grid-area: menu;
+  display: grid;
+  align-content: end;
+  justify-content: start;
+  padding-top: 22%;
+}
+main .bar p {
+  position: relative;
+  line-height: 2rem;
+}
+main .bar::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/temp.jpg");
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-size: cover;
+  opacity: 0.5;
+}/*# sourceMappingURL=main.css.map */
