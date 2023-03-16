@@ -61,39 +61,13 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 20vw 80vw;
+    grid-template-columns: 20% 80%;
     grid-template-areas:
         "header menu"
         "copyright copyright"
     ;
 }
 
-footer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: copyright;
-    background-color: $color-main;
-    color: $color-main-light;
-    height: 9vh;
-
-    h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5%;
-    }
-
-    p {
-        // font-family: $font-main-NUM-handwriting;
-        font-family: $font-main-JP-handwriting;
-        font-size: 2.5rem;
-        padding-top: 4%;
-    }
-
-
-}
 
 header {
     display: grid;
@@ -786,6 +760,34 @@ main {
             }
         }
 
+    }
+
+
+}
+
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: copyright;
+    background-color: $color-main;
+    color: $color-main-light;
+    height: 8vh;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    p {
+        // font-family: $font-main-NUM-handwriting;
+        font-family: $font-main-JP-handwriting;
+        font-size: 2.5rem;
+        padding-top: 4%;
     }
 
 

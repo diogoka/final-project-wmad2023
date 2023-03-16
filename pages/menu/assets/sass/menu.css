@@ -40,30 +40,8 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: 20vw 80vw;
+  grid-template-columns: 20% 80%;
   grid-template-areas: "header menu" "copyright copyright";
-}
-
-footer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: copyright;
-  background-color: #00040d;
-  color: #fafafa;
-  height: 9vh;
-}
-footer h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5%;
-}
-footer p {
-  font-family: "brat", sans-serif;
-  font-size: 2.5rem;
-  padding-top: 4%;
 }
 
 header {
@@ -619,4 +597,26 @@ main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription h2:last-chil
   font-family: "numberHandWriting", sans-serif;
   font-size: 2rem;
   color: #00308F;
-}/*# sourceMappingURL=main.css.map */
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: copyright;
+  background-color: #00040d;
+  color: #fafafa;
+  height: 8vh;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+footer p {
+  font-family: "brat", sans-serif;
+  font-size: 2.5rem;
+  padding-top: 4%;
+}/*# sourceMappingURL=menu.css.map */
