@@ -41,29 +41,7 @@ body {
 body {
   display: grid;
   grid-template-columns: 20vw 80vw;
-  grid-template-areas: "header menu" "copyright copyright";
-}
-
-footer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-area: copyright;
-  background-color: #00040d;
-  color: #fafafa;
-  height: 9vh;
-}
-footer h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5%;
-}
-footer p {
-  font-family: "brat", sans-serif;
-  font-size: 2.5rem;
-  padding-top: 4%;
+  grid-template-areas: "header content" "copyright copyright";
 }
 
 header {
@@ -112,32 +90,33 @@ header .socialMedia i {
 main {
   position: relative;
   background-color: #fafafa;
-  grid-area: menu;
+  grid-area: content;
 }
 main .bar {
   position: relative;
-  height: 80vh;
-  display: grid;
-  grid-template-rows: repeat(3, 33%);
-  grid-template-columns: repeat(3, 33%);
-  grid-template-areas: "JP menu menu" "JP EN B3" "JP EN C3";
+  height: 35vh;
 }
-main .bar .menuTitle {
+main .bar .title {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 7%;
 }
-main .bar .menuTitle h1 {
+main .bar .title h1 {
   font-family: "brat", sans-serif;
   color: #fafafa;
   position: relative;
-  font-size: 8rem;
-  grid-area: menu;
+  font-size: 6.8rem;
   display: grid;
   align-content: end;
   justify-content: start;
-  padding-top: 22%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+main .bar .title h2 {
+  font-family: "brat", sans-serif;
+  font-size: 2.7rem;
 }
 main .bar p {
   position: relative;
@@ -152,5 +131,55 @@ main .bar::before {
   bottom: 0px;
   left: 0px;
   background-size: cover;
+  background-position: center;
   opacity: 0.5;
+}
+main .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57.5vh;
+}
+main .content .contentText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+}
+main .content .contentText h1 {
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.12rem;
+}
+main .content .contentImage .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .content .contentImage .image img {
+  box-shadow: 10px 10px 5px #ccc;
+  padding: 1rem;
+  width: 53%;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: copyright;
+  background-color: #00040d;
+  color: #fafafa;
+  height: 7.5vh;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+footer p {
+  font-family: "brat", sans-serif;
+  font-size: 2.5rem;
+  padding-top: 4%;
 }/*# sourceMappingURL=main.css.map */
