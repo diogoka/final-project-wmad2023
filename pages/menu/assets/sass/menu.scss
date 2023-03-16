@@ -205,8 +205,12 @@ main {
         background-size: cover;
 
 
-        #misoButton, #darkMisoButton, #umamiButton, #giozaButton, #spicyMisoButton{
+        .misoButton, .darkMisoButton, .umamiButton, .giozaButton, .spicyMisoButton{
             color: $color-main-light;
+        }
+
+        .shoyuButton, .topingsButton, .tanreiButton, .beverages{
+            color: $color-main;
         }
 
         ul {
@@ -237,11 +241,17 @@ main {
                 height: 2px;
                 left: 50%;
                 position: absolute;
-                background: $color-main-light;
+                @if color == $color-main {
+                    background: $color-main-light;
+                } @else {
+                    background: $color-main;
+                }
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0;
+                
 
-                //falar com o Arthur sobre isso
+                //agrupar classes dos botoes e usar ao inves do after
+                
             }
 
 

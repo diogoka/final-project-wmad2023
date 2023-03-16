@@ -161,8 +161,11 @@ main .buttonsMenu {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main .buttonsMenu #misoButton, main .buttonsMenu #darkMisoButton, main .buttonsMenu #umamiButton, main .buttonsMenu #giozaButton, main .buttonsMenu #spicyMisoButton {
+main .buttonsMenu .misoButton, main .buttonsMenu .darkMisoButton, main .buttonsMenu .umamiButton, main .buttonsMenu .giozaButton, main .buttonsMenu .spicyMisoButton {
   color: #fafafa;
+}
+main .buttonsMenu .shoyuButton, main .buttonsMenu .topingsButton, main .buttonsMenu .tanreiButton, main .buttonsMenu .beverages {
+  color: #00040d;
 }
 main .buttonsMenu ul {
   display: grid;
@@ -190,7 +193,7 @@ main .buttonsMenu li button:after {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fafafa;
+  background: #00040d;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
