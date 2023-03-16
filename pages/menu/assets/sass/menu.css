@@ -1,0 +1,646 @@
+@font-face {
+  font-family: "chikaraEN-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+@font-face {
+  font-family: "numberHandWriting";
+  src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+@font-face {
+  font-family: "japaneseHandWriting";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "chikaraEN-Regular", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "header menu" "copyright copyright";
+}
+
+header {
+  display: grid;
+  grid-template-rows: 40% 33% 25%;
+  position: fixed;
+  background-color: #00040d;
+  height: 100vh;
+  width: 20vw;
+  grid-area: header;
+}
+header button {
+  background-color: #00040d;
+  font-family: "brat", sans-serif;
+  border: none;
+  color: #fafafa;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  cursor: pointer;
+}
+header .buttons button:hover {
+  color: #00308F;
+}
+header .logo {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header .socialMedia i {
+  font-size: 2rem;
+}
+
+main {
+  position: relative;
+  background-color: #fafafa;
+  grid-area: menu;
+}
+main .bar {
+  position: relative;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: repeat(3, 33%);
+  grid-template-columns: repeat(3, 33%);
+  grid-template-areas: "JP menu menu" "JP EN B3" "JP EN C3";
+  margin-bottom: 3%;
+}
+main .bar .menuTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7%;
+}
+main .bar .menuTitle h1 {
+  font-family: "brat", sans-serif;
+  position: relative;
+  font-size: 8rem;
+  grid-area: menu;
+  display: grid;
+  align-content: end;
+  justify-content: start;
+  padding-top: 22%;
+}
+main .bar p {
+  position: relative;
+  line-height: 2rem;
+}
+main .bar .englishBarExplanation {
+  grid-area: EN;
+  margin-top: 2%;
+  text-align: justify;
+  padding-top: 8%;
+}
+main .bar .japaneseBarExplanation {
+  font-family: "chikaraJP-Regular", sans-serif;
+  width: 30%;
+  grid-area: JP;
+  padding-left: 18%;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+main .bar::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/menuBack.jpeg");
+  background-position: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-size: cover;
+  opacity: 0.5;
+}
+main .buttonsMenu {
+  background-color: #c6c6d0;
+  height: 20vh;
+  margin-left: 3%;
+  margin-right: 3%;
+  box-shadow: 0px 6px 5px #ccc;
+  border-radius: 1%;
+  background-image: url("../images/backgroundBrush.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .buttonsMenu .misoButton, main .buttonsMenu .darkMisoButton, main .buttonsMenu .umamiButton, main .buttonsMenu .giozaButton, main .buttonsMenu .spicyMisoButton {
+  color: #fafafa;
+}
+main .buttonsMenu .shoyuButton, main .buttonsMenu .topingsButton, main .buttonsMenu .tanreiButton, main .buttonsMenu .beverages {
+  color: #00040d;
+}
+main .buttonsMenu ul {
+  display: grid;
+  grid-template-columns: repeat(6, 16.66%);
+  grid-template-rows: repeat(2, 50%);
+  row-gap: 1.5rem;
+}
+main .buttonsMenu li {
+  list-style: none;
+  text-align: center;
+}
+main .buttonsMenu li button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+main .buttonsMenu li button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #00040d;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+main .buttonsMenu li button:hover:after {
+  width: 100%;
+  left: 0;
+}
+main .division {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-bottom: solid #c1c1c1;
+  width: 95%;
+  text-align: center;
+}
+main .line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+}
+main .listPlates {
+  padding-top: 3rem;
+}
+main .listPlates li:nth-last-child(-n+3) {
+  grid-column: span 2;
+}
+main .plate {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "title" "info";
+  row-gap: 7%;
+}
+main .plateName {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+main .plateName h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+}
+main .plateInfo {
+  grid-area: info;
+  display: grid;
+  grid-template-rows: 10% 40% 40% 10%;
+  grid-template-columns: 6% repeat(4, 20%) 14%;
+  line-height: 1.5rem;
+}
+main .plateInfo .plateImage {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width: 60%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+main .plateInfo .plateDescription {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  width: 80%;
+}
+main .plateInfo .plateIngredients {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  margin-top: 1%;
+  padding-left: 8%;
+  font-size: 0.8rem;
+}
+main .plateInfo .platePrice {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+}
+main .plateInfo .platePrice h2 {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 5rem;
+  color: #00308F;
+}
+main .plateInfo .platePrice p {
+  color: red;
+}
+main .plateInfo .plateJapanese {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 5;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .plateInfo .plateJapanese p {
+  font-family: "chikaraJP-Regular", sans-serif;
+  font-size: 5rem;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+main #shoyu .plateJapanese p {
+  color: #C5C6D0;
+}
+main #miso .plateJapanese p {
+  color: #9F705A;
+}
+main #darkMiso .plateJapanese p {
+  color: #4D4C5C;
+  font-size: 3.6rem;
+}
+main #spicyMiso .platePrice ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+main #spicyMiso .platePrice ul li {
+  list-style: none;
+}
+main #spicyMiso .platePrice ul li h3 {
+  padding-bottom: 5%;
+}
+main #spicyMiso .platePrice ul li p {
+  padding-top: 2%;
+}
+main #spicyMiso .platePrice ul li h2 {
+  font-size: 3rem;
+}
+main #spicyMiso .plateJapanese {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding-bottom: 50%;
+}
+main #spicyMiso .plateJapanese p {
+  font-size: 4rem;
+  color: #B90E0A;
+}
+main #umami .plateJapanese p {
+  color: #C5C6D0;
+}
+main #tanrei .plateJapanese p {
+  color: #318CE7;
+}
+main .extraTopings {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "title" "info";
+  row-gap: 10%;
+  padding-bottom: 10%;
+}
+main .extraTopings .extraTopingsTitle {
+  grid-area: title;
+}
+main .extraTopings .extraTopingsTitle h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+main .extraTopings .topings {
+  grid-area: info;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 4%;
+}
+main .extraTopings .topings #pork {
+  display: grid;
+  grid-template-columns: repeat(2, 20%);
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+}
+main .extraTopings .topings .toping {
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  grid-template-rows: repeat(3, 22%);
+  grid-template-areas: "title title" "price img" "price img";
+  align-items: center;
+  justify-content: center;
+}
+main .extraTopings .topings .toping h1 {
+  grid-area: title;
+  font-size: 1.3rem;
+}
+main .extraTopings .topings .toping .topingImage {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2%;
+  box-shadow: 0px 6px 5px #ccc;
+}
+main .extraTopings .topings .toping .topingPrice {
+  grid-area: price;
+}
+main .extraTopings .topings .toping .topingPrice h2 {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .extraTopings .topings .toping .topingPrice p {
+  color: red;
+}
+main .giozaChasuBits {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-left: 5%;
+}
+main .giozaChasuBits .gioza,
+main .giozaChasuBits .chasuBits {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+main .giozaChasuBits .gioza .giozaInfo h1,
+main .giozaChasuBits .gioza .chasuInfo h1,
+main .giozaChasuBits .chasuBits .giozaInfo h1,
+main .giozaChasuBits .chasuBits .chasuInfo h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+}
+main .giozaChasuBits .gioza .giozaInfo .descriptionGiozaChasu,
+main .giozaChasuBits .gioza .chasuInfo .descriptionGiozaChasu,
+main .giozaChasuBits .chasuBits .giozaInfo .descriptionGiozaChasu,
+main .giozaChasuBits .chasuBits .chasuInfo .descriptionGiozaChasu {
+  font-size: 1.3rem;
+}
+main .giozaChasuBits .gioza .giozaInfo .priceGiozaChasu,
+main .giozaChasuBits .gioza .chasuInfo .priceGiozaChasu,
+main .giozaChasuBits .chasuBits .giozaInfo .priceGiozaChasu,
+main .giozaChasuBits .chasuBits .chasuInfo .priceGiozaChasu {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .giozaChasuBits .gioza .giozaInfo p,
+main .giozaChasuBits .gioza .chasuInfo p,
+main .giozaChasuBits .chasuBits .giozaInfo p,
+main .giozaChasuBits .chasuBits .chasuInfo p {
+  color: red;
+}
+main .giozaChasuBits .gioza .imageGioza img, main .giozaChasuBits .gioza .chasuImage img,
+main .giozaChasuBits .chasuBits .imageGioza img,
+main .giozaChasuBits .chasuBits .chasuImage img {
+  border-radius: 2%;
+  box-shadow: 0px 6px 5px #ccc;
+}
+main .giozaChasuBits .gioza .priceAndDescription,
+main .giozaChasuBits .chasuBits .priceAndDescription {
+  padding-top: 8%;
+  padding-left: 6%;
+}
+main .giozaChasuBits img {
+  margin-top: 5%;
+  width: 60%;
+}
+main .giozaChasuBits .chasuBitsImg {
+  width: 80%;
+}
+main .beverages {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  background-color: #fafafa;
+}
+main .beverages h1 {
+  font-family: "brat", sans-serif;
+  font-size: 4rem;
+}
+main .beverages .promotionBeerGrid {
+  margin-bottom: 3%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  justify-content: center;
+  align-items: center;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer h2 {
+  font-size: 1.3rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .discount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 1rem;
+  border: 1px solid #00040d;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image img:first-child {
+  width: 37%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image img {
+  width: 25%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .image h1 {
+  font-size: 7rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice {
+  padding-right: 24%;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice h2 {
+  font-size: 1.3rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #oldprice {
+  font-family: "numberHandWriting", sans-serif;
+  color: #00308F;
+  text-decoration: line-through;
+  font-size: 2rem;
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #arrow {
+  display: inline-block;
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 4rem;
+  transform: rotate(90deg);
+}
+main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 3rem;
+  color: red;
+}
+main .beverages .beerGrid {
+  display: grid;
+  grid-template-rows: 23% 62%;
+  margin-bottom: 3%;
+}
+main .beverages .beerGrid .beers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 50%;
+}
+main .beverages .beerGrid .beers .beer {
+  display: grid;
+  grid-template-columns: 30% 10% 30%;
+  justify-content: center;
+  align-content: center;
+  -moz-column-gap: 4%;
+       column-gap: 4%;
+}
+main .beverages .beerGrid .beers .beer #asahi img {
+  width: 53%;
+}
+main .beverages .beerGrid .beers .beer #acres img {
+  width: 48%;
+}
+main .beverages .beerGrid .beers .beer .beername,
+main .beverages .beerGrid .beers .beer .price,
+main .beverages .beerGrid .beers .beer .image {
+  display: flex;
+  align-items: center;
+}
+main .beverages .beerGrid .beers .beer .price h2 {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .beverages .sakeGrid {
+  display: grid;
+  grid-template-rows: 25% 75%;
+}
+main .beverages .sakeGrid .sakeInfo {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-content: center;
+  align-content: center;
+  padding-left: 6%;
+  height: 50%;
+  margin-bottom: 8%;
+}
+main .beverages .sakeGrid .sakeInfo .sizes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-content: center;
+}
+main .beverages .sakeGrid .sakeInfo .smallSize,
+main .beverages .sakeGrid .sakeInfo .largeSize {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  gap: 6%;
+}
+main .beverages .sakeGrid .sakeInfo .smallSize h2:last-child,
+main .beverages .sakeGrid .sakeInfo .largeSize h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+main .beverages .nonAlcoholicGrid {
+  display: grid;
+  grid-template-rows: 35% 65%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-bottom: 6%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  height: 53%;
+  padding-left: 17%;
+}
+main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription h2:last-child {
+  font-family: "numberHandWriting", sans-serif;
+  font-size: 2rem;
+  color: #00308F;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: copyright;
+  background-color: #00040d;
+  color: #fafafa;
+  height: 8vh;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+footer p {
+  font-family: "brat", sans-serif;
+  font-size: 2.5rem;
+  padding-top: 4%;
+}/*# sourceMappingURL=menu.css.map */

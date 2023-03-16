@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/sass/menu.css">
     <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.ico">
     <link rel="stylesheet" href="https://kit.fontawesome.com/4febbc7477.css" crossorigin="anonymous" type="text/css">
     <title>Menu</title>
@@ -14,12 +14,14 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../../assets/images/logo.jpg" alt="logo">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo.jpg" alt="logo">
+            </a>
         </div>
         <div class="buttons">
-            <button>About Us</button>
-            <button>Menu</button>
-            <button>Order</button>
+            <button type="button" onclick="window.location.href='../aboutUs/about.html';">About Us</button>
+            <button id="buttonMenu">Menu</button>
+            <button type="button" onclick="window.location.href='../order/order.html';">Order</button>
         </div>
         <div class="socialMedia">
             <button><i class="fa fa-facebook"></i></button>
@@ -42,17 +44,16 @@
         </div>
         <div class="buttonsMenu">
             <ul class="listPlates">
-                <li><button type="button" onclick="window.location.href='#shoyu';">Shoyu</button></li>
-                <li><button type="button" onclick="window.location.href='#miso';">Miso</button></li>
-                <li><button type="button" onclick="window.location.href='#darkMiso';">Dark Miso</button></li>
-                <li><button type="button" onclick="window.location.href='#spicyMiso';">Spice Miso</button></li>
-                <li><button type="button" onclick="window.location.href='#umami';">Umami</button></li>
-                <li><button type="button" onclick="window.location.href='#tanrei';">Tanrei Shio</button></li>
-                <li><button type="button" onclick="window.location.href='#extraTopings';">Extra topings</button></li>
-                <li><button type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button>
+                <li><button class="shoyuButton" type="button" onclick="window.location.href='#shoyu';">Shoyu</button></li>
+                <li><button class="misoButton" type="button" onclick="window.location.href='#miso';">Miso</button></li>
+                <li><button class="darkMisoButton" type="button" onclick="window.location.href='#darkMiso';">Dark Miso</button></li>
+                <li><button class="spicyMisoButton" type="button" onclick="window.location.href='#spicyMiso';">Spicy Miso</button></li>
+                <li><button class="umamiButton" type="button" onclick="window.location.href='#umami';">Umami</button></li>
+                <li><button class="tanreiButton" type="button" onclick="window.location.href='#tanrei';">Tanrei Shio</button></li>
+                <li><button class="topingsButton" type="button" onclick="window.location.href='#extraTopings';">Topings</button></li>
+                <li><button class="giozaButton" type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button>
                 </li>
-                <li><button type="button" onclick="window.location.href='#beverages';">Beverages (alcoholic and
-                        non)</button></li>
+                <li><button type="button" onclick="window.location.href='#beverages';">Beverages</button></li>
             </ul>
         </div>
         <div class="line">
@@ -67,7 +68,7 @@
                     <p class="plateDescription">Our original blend of 3 kinds of soy sauce is aged for a week.
                         Taste the mellow, deep flavour it crates with our rich tonkotsu broth.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/shoyu.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, bok choy,
                         bamboo shoots & nori.
                         <br> *We are not offering substitutions of toppings.
@@ -93,7 +94,7 @@
                         house-made mayu (flavour oil) for additionla
                         richness and umami.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/miso.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, corn, green
                         onions and piclked ginger.
                         <br> *We are not offering substitutions of toppings.
@@ -118,7 +119,7 @@
                     <p class="plateDescription">A unique ramen mande with 3 kinds of miso blended with bamboo charcoal
                         powder.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/darkMiso.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, corn, green
                         onions and piclked ginger.
                         <br> *We are not offering substitutions of toppings.
@@ -143,7 +144,7 @@
                     <p class="plateDescription">OTsukiya’s original spicy ramen made with a blend of 3 kinds of miso and
                         a house-made spicy paste.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/spicyMiso.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, corn, green
                         onions and piclked ginger.
                         <br> *We are not offering substitutions of toppings.
@@ -192,7 +193,7 @@
                     <p class="plateDescription">Our original blend of 3 kinds of soy sauce is aged for a week.
                         <br>Taste the mellow, deep flavour it crates with our rich tonkotsu broth.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/umami.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, bok choy,
                         bamboo shoots & nori.
                         <br> *We are not offering substitutions of toppings.
@@ -219,7 +220,7 @@
                         <br>
                         Please refrain from switching to tick noodles.
                     </p>
-                    <img class="plateImage" src="./assets/images/plate1.png" alt="TonkotsuRamenShoyuPicture">
+                    <img class="plateImage" src="./assets/images/tanrei.png" alt="TonkotsuRamenShoyuPicture">
                     <p class="plateIngredients">Served with: noodles (150g), pork chasu, soft boiled egg, corn, green
                         onions, bamboo shoots and lime.
                         <br> *We are not offering substitutions of toppings.
@@ -370,9 +371,10 @@
                         <h3>30% off!</h3>
                     </div>
                     <div class="image">
-                        <img src="./assets/images/gioza.jpeg" alt="giozaPicture">
+                        <!-- <img src="./assets/images/gioza.jpeg" alt="giozaPicture">
                         <h1>+</h1>
-                        <img src="./assets/images/33acres.png" alt="33acresPicture">
+                        <img src="./assets/images/33acres.png" alt="33acresPicture"> -->
+                        <img src="./assets/images/promotionGiozaBeer.jpeg" alt="">
                     </div>
                     <div class="gridPromotionPrice">
                         <div class="promotionPrice">
@@ -455,6 +457,6 @@
 </body>
 
 
-<script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>\
 
 </html>
