@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "ramenRegular";
+    src: url(../fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf) format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+@font-face {
+  font-family: "numberHandWriting";
+  src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+@font-face {
+  font-family: "japaneseHandWriting";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "ramenRegular";
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 80% 20%;
+    margin: 0;
+}
+
+header {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    background-color: black;
+    /* height: auto; */
+    /* padding: 0; */
+    /* width: 20%; */
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* .logo img {
+}
+
+.buttons {
+} */
+
+.buttons button {
+    color: white;
+    /* font-size: x-large; */
+    font-size: 3rem;
+    margin-bottom: 70px;
+    display: block;
+    margin: 1.8em auto;
+    background-color: black;
+    border:none;
+    font-family: "brat", sans-serif;
+    color: #fafafa;
+}
+
+button {
+    cursor: pointer;
+}
+
+.sns-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.fab {
+    font-size: xx-large;
+    color: white;
+}
+
+main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    /* margin: 0 auto; */
+    background-image: url("/assets/images/background-image.jpg");
+    background-size: cover;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    font-size: 350%;
+    text-align: center;
+    margin: 2em 0 1.5em 0;
+    font-family: Brush Script MT;
+    color: black;
+}
+
+.button button {
+    font-size: ;
+}
+
+.in-main {
+    width: 70%;
+    display: flex;
+    /* justify-content: center; */
+    margin: 0 auto;
+}
+
+
+.in-main button {
+    color: black;
+    background-color: transparent;
+    font-weight:  bold;
+    /* align-items: center; */
+    /* font-style: italic; */
+}
+
+footer {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    background-color: black;
+    color: white;
+    /* margin: 1%; */
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.5em;
+    font-size: small;
+    /* justify-content: space-evenly; */
+}
+
+footer h3 {
+    margin: 0 0 10px 0;
+    /* margin-top: 10px; */
+}
+
+footer p {
+    /* margin: 0; */
+}
+
+.footer-left {
+    /* margin-left: 5%; */
+    /* margin-right: 30px; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-hour {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.days1, .days2 {
+    padding-right: 1.2em;
+}
+
+.days1 p, .days2 p {
+    padding-top: 5px;
+}
+
+.hours1 {
+    padding-right: 3em;
+}
+
+.hours1 p, .hours2 p {
+    padding-top: 5px;
+
+}
+
+.footer-right {
+    width: 50%;
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+.restaurant-information {
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+}
+
+
+.restaurant-information a {
+    color: white;
+}
+
+.address {
+    line-height: 1.5em;
+    padding-top: 5px;
+
+}
+
+.contact {
+    display:inline;
+    line-height: 1.5em;
+    letter-spacing:;
+}
+
+.vistUs {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.map {
+    position: relative;
+    padding: 0;
+    width: 33%;
+    margin: 0;
+}
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18em;
+    height: 8em;
+}
