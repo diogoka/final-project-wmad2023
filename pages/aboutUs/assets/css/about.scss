@@ -208,8 +208,8 @@ footer {
     align-items: center;
     justify-content: center;
     grid-area: copyright;
-    background-color: $color-main;
-    color: $color-main-light;
+    // background-color: $color-main-light;
+    color: $color-main;
     height: 7.5vh;
 
     h1 {
@@ -217,12 +217,13 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 5%;
+        font-size: 1rem;
     }
 
     p {
         // font-family: $font-main-NUM-handwriting;
         font-family: $font-main-JP-handwriting;
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-top: 4%;
     }
 

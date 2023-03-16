@@ -168,8 +168,7 @@ footer {
   align-items: center;
   justify-content: center;
   grid-area: copyright;
-  background-color: #00040d;
-  color: #fafafa;
+  color: #00040d;
   height: 7.5vh;
 }
 footer h1 {
@@ -177,9 +176,10 @@ footer h1 {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  font-size: 1rem;
 }
 footer p {
   font-family: "brat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-top: 4%;
 }/*# sourceMappingURL=about.css.map */

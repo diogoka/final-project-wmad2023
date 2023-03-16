@@ -94,11 +94,12 @@ main {
 }
 main .bar {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   display: grid;
   grid-template-rows: repeat(3, 33%);
   grid-template-columns: repeat(3, 33%);
   grid-template-areas: "JP menu menu" "JP EN B3" "JP EN C3";
+  margin-bottom: 3%;
 }
 main .bar .menuTitle {
   display: flex;
@@ -139,7 +140,8 @@ main .bar .japaneseBarExplanation {
 main .bar::before {
   content: "";
   position: absolute;
-  background-image: url("../images/menubackgroundTEMP.jpg");
+  background-image: url("../images/menuBack.jpeg");
+  background-position: center;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -150,6 +152,17 @@ main .bar::before {
 main .buttonsMenu {
   background-color: #c6c6d0;
   height: 20vh;
+  margin-left: 3%;
+  margin-right: 3%;
+  box-shadow: 0px 6px 5px #ccc;
+  border-radius: 1%;
+  background-image: url("../images/backgroundBrush.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .buttonsMenu #misoButton, main .buttonsMenu #darkMisoButton, main .buttonsMenu #umamiButton, main .buttonsMenu #giozaButton, main .buttonsMenu #spicyMisoButton {
+  color: #fafafa;
 }
 main .buttonsMenu ul {
   display: grid;
@@ -373,6 +386,8 @@ main .extraTopings .topings .toping .topingImage {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 2%;
+  box-shadow: 0px 6px 5px #ccc;
 }
 main .extraTopings .topings .toping .topingPrice {
   grid-area: price;
@@ -422,13 +437,19 @@ main .giozaChasuBits .chasuBits .giozaInfo p,
 main .giozaChasuBits .chasuBits .chasuInfo p {
   color: red;
 }
+main .giozaChasuBits .gioza .imageGioza img, main .giozaChasuBits .gioza .chasuImage img,
+main .giozaChasuBits .chasuBits .imageGioza img,
+main .giozaChasuBits .chasuBits .chasuImage img {
+  border-radius: 2%;
+  box-shadow: 0px 6px 5px #ccc;
+}
 main .giozaChasuBits .gioza .priceAndDescription,
 main .giozaChasuBits .chasuBits .priceAndDescription {
   padding-top: 8%;
   padding-left: 6%;
 }
 main .giozaChasuBits img {
-  padding-top: 5%;
+  margin-top: 5%;
   width: 60%;
 }
 main .giozaChasuBits .chasuBitsImg {
