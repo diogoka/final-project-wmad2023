@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "chikaraEN-Regular";
+    src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "chikaraEN-Bold";
+    src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "chikaraJP-Regular";
+    src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "chikaraJP-Bold";
+    src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "brat";
+    src: url("../../../../assets/fonts/Brat.ttf");
+}
+
+@font-face {
+    font-family: "numberHandWriting";
+    src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+
+@font-face {
+    font-family: "japaneseHandWriting";
+    src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+}
+
+$font-main-EN-regular: "chikaraEN-Regular", sans-serif;
+$font-main-EN-bold: "chikaraEN-Bold", sans-serif;
+$font-main-JP-regular: "chikaraJP-Regular", sans-serif;
+$font-main-JP-bold: "chikaraJP-Bold", sans-serif;
+$font-main-JP-handwriting: "brat", sans-serif;
+$font-main-NUM-handwriting: "numberHandWriting", sans-serif;
+$font-main-JAP-handwriting: "japaneseHandWriting", sans-serif;
+
+$color-main: #00040d;
+$color-main-light: #fafafa;
+$price-color: #00308F;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: $font-main-EN-regular;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-areas:
+        "header content"
+        "copyright copyright"
+    ;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 40% 33% 25%;
+    position: fixed;
+    background-color: $color-main;
+    height: 100vh;
+    width: 20vw;
+    grid-area: header;
+
+    button {
+        background-color: $color-main;
+        font-family: $font-main-JP-handwriting;
+        border: none;
+        color: $color-main-light;
+        font-size: 3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        cursor: pointer;
+
+        button:hover {
+            color: $price-color;
+        }
+    }
+
+    .logo {
+        padding-top: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .socialMedia {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+main {
+    position: relative;
+    background-color: $color-main-light;
+    grid-area: content;
+
+    .bar {
+        position: relative;
+        height: 35vh;
+
+        .title {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 7%;
+
+            h1 {
+                font-family: $font-main-JP-handwriting;
+                color: $color-main-light;
+                position: relative;
+                font-size: 6.8rem;
+                display: grid;
+                align-content: end;
+                justify-content: start;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+            h2{
+                font-family: $font-main-JP-handwriting;
+                font-size: 2.7rem;
+            }
+        }
+        p {
+            position: relative;
+            line-height: 2rem;
+        }
+    }
+
+    .bar::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/temp.jpg");
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57.5vh;
+
+        .contentText{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10%;
+            h1{
+                text-align: justify;
+                line-height: 2rem;
+                font-size: 1.12rem;
+            }
+        }
+
+        .contentImage{
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    box-shadow: 10px 10px 5px #ccc;
+                    padding: 1rem;
+                    width:53%
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: copyright;
+    background-color: $color-main;
+    color: $color-main-light;
+    height: 7.5vh;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    p {
+        // font-family: $font-main-NUM-handwriting;
+        font-family: $font-main-JP-handwriting;
+        font-size: 2.5rem;
+        padding-top: 4%;
+    }
+
+
+}
