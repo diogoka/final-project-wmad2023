@@ -205,13 +205,11 @@ footer #socialMediaMobile {
 
 @media only screen and (max-width: 390px) {
   body {
-    display: grid;
-    grid-template-rows: 18vh 90vh 10vh;
-    grid-template-columns: 100%;
-    grid-template-areas: "header" "content" "copyright";
     transition: all 0.5s ease;
-    height: 100vh;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
   header {
     display: grid;
@@ -220,7 +218,7 @@ footer #socialMediaMobile {
     place-items: center;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: inherit;
     width: 100vw;
     height: 18vh;
     transition: all 0.5s ease;
@@ -336,10 +334,8 @@ footer #socialMediaMobile {
     color: #00040d;
   }
   main {
-    width: 100vw;
-    height: 30vh;
     display: grid;
-    grid-area: content;
+    position: relative;
   }
   main .bar {
     height: 100%;
@@ -363,7 +359,7 @@ footer #socialMediaMobile {
   }
   main .content {
     flex-direction: column;
-    height: 50vh;
+    height: 100%;
   }
   main .content .contentText {
     padding-right: 10%;
@@ -373,20 +369,32 @@ footer #socialMediaMobile {
   main .content .contentText h1 {
     font-size: 0.8rem;
   }
+  main .content .contentImage {
+    display: flex;
+    justify-content: center;
+  }
+  main .content .contentImage .image {
+    width: 66%;
+    display: block;
+    margin-right: 11%;
+    margin-bottom: 10%;
+  }
+  main .content .contentImage .image img {
+    width: 100%;
+  }
   main .content .contentImage .zoom:hover {
     transform: scale(1);
   }
   footer {
     display: flex;
     flex-direction: column-reverse;
-    grid-area: copyright;
     background-color: #00040d;
     gap: 16%;
     height: 13vh;
   }
   footer #socialMediaMobile {
     display: block;
-    margin-bottom: 1%;
+    margin-bottom: 4%;
     padding-top: 1%;
   }
   footer #socialMediaMobile button {

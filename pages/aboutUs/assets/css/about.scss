@@ -259,16 +259,11 @@ footer {
 
 @media only screen and (max-width: 390px) {
     body {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        display: grid;
-        grid-template-rows: 18vh 90vh 10vh;
-        grid-template-columns: 100%;
-        grid-template-areas: "header" "content" "copyright";
         transition: all 0.5s ease;
-        height: 100vh;
-        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
 
     }
 
@@ -279,7 +274,7 @@ footer {
         place-items: center;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: inherit;
         width: 100vw;
         height: 18vh;
         transition: all 0.5s ease;
@@ -419,11 +414,8 @@ footer {
     }
 
     main {
-        width: 100vw;
-        height: 30vh;
         display: grid;
-        grid-area: content;
-        
+        position: relative;
 
         .bar {
             height: 100%;
@@ -452,7 +444,7 @@ footer {
 
         .content {
             flex-direction: column;
-            height: 50vh;
+            height: 100%;
             .contentText {
                 padding-right: 10%;
                 padding-bottom: 5%;
@@ -462,6 +454,18 @@ footer {
                 }
             }
             .contentImage{
+                display: flex;
+                justify-content: center;
+                .image{
+                    width: 66%;
+                    display: block;
+                    margin-right: 11%;
+                    margin-bottom: 10%;
+                    img{
+                        width: 100%;
+                        // padding: 0;
+                    }
+                }
             .zoom:hover {
                     transform: scale(1);
                 }
@@ -473,13 +477,12 @@ footer {
     footer {
         display: flex;
         flex-direction: column-reverse;
-        grid-area: copyright;
         background-color: $color-main;
         gap: 16%;
         height: 13vh;
         #socialMediaMobile{
             display: block;
-            margin-bottom: 1%;
+            margin-bottom: 4%;
             padding-top: 1%;
             button{
                 background-color: transparent;

@@ -161,10 +161,17 @@ main .buttonsMenu {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main .buttonsMenu .misoButton, main .buttonsMenu .darkMisoButton, main .buttonsMenu .umamiButton, main .buttonsMenu .giozaButton, main .buttonsMenu .spicyMisoButton {
+main .buttonsMenu .misoButton,
+main .buttonsMenu .darkMisoButton,
+main .buttonsMenu .umamiButton,
+main .buttonsMenu .giozaButton,
+main .buttonsMenu .spicyMisoButton {
   color: #fafafa;
 }
-main .buttonsMenu .shoyuButton, main .buttonsMenu .topingsButton, main .buttonsMenu .tanreiButton, main .buttonsMenu .beverages {
+main .buttonsMenu .shoyuButton,
+main .buttonsMenu .topingsButton,
+main .buttonsMenu .tanreiButton,
+main .buttonsMenu .beverages {
   color: #00040d;
 }
 main .buttonsMenu ul {
@@ -440,7 +447,8 @@ main .giozaChasuBits .chasuBits .giozaInfo p,
 main .giozaChasuBits .chasuBits .chasuInfo p {
   color: red;
 }
-main .giozaChasuBits .gioza .imageGioza img, main .giozaChasuBits .gioza .chasuImage img,
+main .giozaChasuBits .gioza .imageGioza img,
+main .giozaChasuBits .gioza .chasuImage img,
 main .giozaChasuBits .chasuBits .imageGioza img,
 main .giozaChasuBits .chasuBits .chasuImage img {
   border-radius: 2%;
@@ -643,4 +651,192 @@ footer p {
   font-family: "brat", sans-serif;
   font-size: 2.5rem;
   padding-top: 4%;
+}
+
+@media only screen and (max-width: 390px) {
+  body {
+    display: grid;
+    grid-template-rows: 18vh 90vh 10vh;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "content" "copyright";
+    transition: all 0.5s ease;
+    height: 100vh;
+    width: 100vw;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 18vh;
+    transition: all 0.5s ease;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  header .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo img {
+    width: 72%;
+  }
+  header .titleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9%;
+  }
+  header .titleMobile h1 {
+    font-family: "brat", sans-serif;
+    color: #fafafa;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  header .socialMedia,
+  header .buttons {
+    display: none;
+  }
+  header .dropdown {
+    position: relative;
+    display: inline;
+    padding-right: 1%;
+    transition: all 0.5s ease;
+  }
+  header .nav-button {
+    position: relative;
+    height: 2.4rem;
+    width: 2.8rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #fafafa;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.25s cubic-bezier(0.17, 0.67, 0.89, 1.4);
+    transition-property: transform;
+    will-change: transform;
+  }
+  header .nav-button::before,
+  header .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 5px;
+    background: currentColor;
+    transition: 0.25s;
+    transition-property: transform, top;
+    will-change: transform, top;
+  }
+  header .nav-button::before {
+    top: 0;
+  }
+  header .nav-button::after {
+    top: calc(100% - 4px);
+  }
+  header .transform2:before {
+    width: 60%;
+    transform: rotate(-45deg) translate3d(-48%, 0, 0);
+  }
+  header .transform1:after {
+    width: 60%;
+    transform: rotate(45deg) translate3d(-48%, 0, 0);
+  }
+  .dropContent {
+    position: absolute;
+    background-color: #00040d;
+    width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    margin-top: 30%;
+    transition: all 0.5s ease;
+  }
+  .dropContent a {
+    color: #fafafa;
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropContent a:hover {
+    background-color: #fafafa;
+    color: #00040d;
+  }
+  main {
+    width: 100vw;
+    display: flex;
+    grid-area: content;
+    flex-direction: column;
+  }
+  main .bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    height: 100%;
+  }
+  main .bar .menuTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 0;
+  }
+  main .bar .menuTitle h1 {
+    font-family: "brat", sans-serif;
+    font-size: 3.2rem;
+    color: #00040d;
+    padding: 0;
+  }
+  main .bar .englishBarExplanation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  main .bar .japaneseBarExplanation {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+  main .buttonsMenu {
+    height: 60%;
+  }
+  main .buttonsMenu ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=menu.css.map */
