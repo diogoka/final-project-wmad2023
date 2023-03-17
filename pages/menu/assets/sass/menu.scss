@@ -845,17 +845,12 @@ footer {
 
 //Responsiveness 
 @media only screen and (max-width: 390px) {
-    body {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        display: grid;
-        grid-template-rows: 18vh 90vh 10vh;
-        grid-template-columns: 100%;
-        grid-template-areas: "header" "content" "copyright";
+body {
         transition: all 0.5s ease;
-        height: 100vh;
-        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
 
     }
 
@@ -866,7 +861,7 @@ footer {
         place-items: center;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: inherit;
         width: 100vw;
         height: 18vh;
         transition: all 0.5s ease;
@@ -1005,70 +1000,80 @@ footer {
 
     }
 
-    main {
-        width: 100vw;
-        display: flex;
-        grid-area: content;
-        flex-direction: column;
 
-        .bar {
+    main{
+        .bar{
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 6%;
             height: 100%;
-
-            .menuTitle {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5%;
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            .menuTitle{
                 padding: 0;
-
-                h1 {
-                    font-family: $font-main-JP-handwriting;
-                    font-size: 3.2rem;
-                    color: $color-main;
+                margin: {
+                    top: 7%;
+                    bottom: 6%;
+                };
+                h1{
+                    display: block;
                     padding: 0;
+                    font-size: 4rem;
                 }
             }
-
-            .englishBarExplanation {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .englishBarExplanation, .japaneseBarExplanation{
+                width: 80%;
+                height: 100%;
+                margin: 0;
                 padding: 0;
-                margin: 0;
-                padding-top: 2%;
-                padding-left: 5%;
-                padding-right: 5%;
+                margin-left: 10%;
             }
-
-            .japaneseBarExplanation {
-                width: 90%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-                padding: {
-                    left: 9%;
-                    right: 9%;
+            .japaneseBarExplanation{
+                margin: {
+                    top: 10%;
+                    bottom: 8%;
                 };
+                
+
             }
         }
 
         .buttonsMenu{
-            height: 60%;
-            ul{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            .listPlates{
+                position: relative;
+                width: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
-                flex-wrap: wrap;
+                padding: 0;
+                overflow: hidden;
+                row-gap: 0;
+                li{
+                    button{
+                        color: $color-main!important;
+                        background-color: $color-main-light!important;
+                        float: left;
+                        margin-left: 5%;
+                    }
+                }
+                li:nth-child(odd){
+                    background-color: $color-main;
+                    button{
+                        float: right;
+                        margin-right: 5%;
 
+                    }
+                }
             }
-             
         }
     }
+
+    
+
 
 
 }

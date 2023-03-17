@@ -655,13 +655,11 @@ footer p {
 
 @media only screen and (max-width: 390px) {
   body {
-    display: grid;
-    grid-template-rows: 18vh 90vh 10vh;
-    grid-template-columns: 100%;
-    grid-template-areas: "header" "content" "copyright";
     transition: all 0.5s ease;
-    height: 100vh;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
   header {
     display: grid;
@@ -670,7 +668,7 @@ footer p {
     place-items: center;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: inherit;
     width: 100vw;
     height: 18vh;
     transition: all 0.5s ease;
@@ -785,58 +783,62 @@ footer p {
     background-color: #fafafa;
     color: #00040d;
   }
-  main {
-    width: 100vw;
-    display: flex;
-    grid-area: content;
-    flex-direction: column;
-  }
   main .bar {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6%;
     height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
   main .bar .menuTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
     padding: 0;
+    margin-top: 7%;
+    margin-bottom: 6%;
   }
   main .bar .menuTitle h1 {
-    font-family: "brat", sans-serif;
-    font-size: 3.2rem;
-    color: #00040d;
+    display: block;
     padding: 0;
+    font-size: 4rem;
   }
-  main .bar .englishBarExplanation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+  main .bar .englishBarExplanation, main .bar .japaneseBarExplanation {
+    width: 80%;
+    height: 100%;
     margin: 0;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0;
+    margin-left: 10%;
   }
   main .bar .japaneseBarExplanation {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding-left: 9%;
-    padding-right: 9%;
+    margin-top: 10%;
+    margin-bottom: 8%;
   }
   main .buttonsMenu {
-    height: 60%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
-  main .buttonsMenu ul {
+  main .buttonsMenu .listPlates {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    padding: 0;
+    overflow: hidden;
+    row-gap: 0;
+  }
+  main .buttonsMenu .listPlates li button {
+    color: #00040d !important;
+    background-color: #fafafa !important;
+    float: left;
+    margin-left: 5%;
+  }
+  main .buttonsMenu .listPlates li:nth-child(odd) {
+    background-color: #00040d;
+  }
+  main .buttonsMenu .listPlates li:nth-child(odd) button {
+    float: right;
+    margin-right: 5%;
   }
 }/*# sourceMappingURL=menu.css.map */
