@@ -71,13 +71,15 @@ body {
 
 
 header {
-    display: grid;
-    grid-template-rows: 40% 33% 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     background-color: $color-main;
     height: 100%;
     width: 20%;
     grid-area: header;
+    z-index: 1;
 
     button {
         background-color: $color-main;
@@ -92,14 +94,61 @@ header {
     .buttons {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         gap: 3rem;
         align-items: center;
         cursor: pointer;
+        padding-bottom: 9px;
 
-        button:hover {
-            color: $price-color;
+        .lines {
+            height: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            overflow: hidden;
+            border-radius: 18px 84px 21px 75px;
+
+
+
+            .lineEffect {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: $color-main-light;
+                position: relative;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 700ms;
+                //top esquerdo, top direito, baixo direito, baixo esquerdo
+                border-radius: 86% 4% 80% 40%;
+
+            }
+
+            @for $i from 1 through 13 {
+                .lineEffect#{$i} {
+                    height: 1.5px;
+                }
+            }
+        }
+
+
+    }
+
+    #menuButton {
+        .lines {
+            .lineEffect {
+                transform: scaleX(1);
+            }
         }
     }
+
+    .buttonHeader:hover .lineEffect {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
 
     .logo {
         padding-top: 3.5rem;
@@ -111,11 +160,40 @@ header {
     .socialMedia {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
+        padding-bottom: 45px;
 
-        i {
-            font-size: 2rem;
+        button {
+            height: fit-content;
+
+            i {
+                font-size: 2rem;
+            }
         }
+    }
+
+    .socialMedia {
+        button:hover {
+            .fa-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .fa-facebook {
+                background: #2372a3;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .titleMobile,
+    .dropdown {
+        display: none;
     }
 }
 
@@ -154,24 +232,28 @@ main {
             }
         }
 
-
-        p {
-            position: relative;
-            line-height: 2rem;
-        }
-
         .englishBarExplanation {
+            position: relative;
+            line-height: 3rem;
             grid-area: EN;
             margin-top: 2%;
             text-align: justify;
             padding-top: 8%;
+            font-size: 1.3rem;
+            font-weight: lighter;
+            width: 100%;
         }
 
         .japaneseBarExplanation {
+            position: relative;
+            line-height: 2rem;
             font-family: $font-main-JP-regular;
-            width: 30%;
+            font-family: $font-menu-brushJP;
+            font-weight: lighter;
+            width: 20%;
+            font-size: 1.3rem;
             grid-area: JP;
-            padding-left: 18%;
+            padding-left: 15%;
             display: flex;
             text-align: justify;
             justify-content: center;
@@ -182,7 +264,6 @@ main {
     .bar::before {
         content: "";
         position: absolute;
-        // background-image: url("../images/menubackgroundTEMP.jpg");
         background-image: url("../images/menuBack.jpeg");
         background-position: center;
         top: 0px;
@@ -204,9 +285,8 @@ main {
         border-radius: 1%;
         background-image: url("../images/backgroundBrush.jpg");
         background-position: center;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size: cover;
-
 
         .misoButton,
         .darkMisoButton,
@@ -243,6 +323,8 @@ main {
                 letter-spacing: 0.1em;
             }
 
+
+
             button:after {
                 background: none repeat scroll 0 0 transparent;
                 bottom: 0;
@@ -251,24 +333,10 @@ main {
                 height: 2px;
                 left: 50%;
                 position: absolute;
-                background: $color-main;
-
-
-                // @if color==$color-main {
-                //     background: $color-main-light;
-                // }
-
-                // @else {
-                //     background: $color-main;
-                // }
-
+                background: $color-main-light;
                 transition: width 0.3s ease 0s,
                     left 0.3s ease 0s;
                 width: 0;
-
-
-                //agrupar classes dos botoes e usar ao inves do after
-
             }
 
 
@@ -623,10 +691,11 @@ main {
 
         .promotionBeerGrid {
             margin-bottom: 3%;
+            margin-right: 12px;
 
             .promotionGiozaBeer {
                 display: grid;
-                grid-template-columns: repeat(3, 33%);
+                grid-template-columns: 22% 7% repeat(2, 25%);
                 justify-content: center;
                 align-items: center;
 
@@ -641,7 +710,27 @@ main {
                     justify-content: center;
                     justify-self: center;
                     padding: 1rem;
-                    border: 1px solid #00040d;
+                    border: 2px solid #00040d;
+                    border-radius: 10px;
+                    box-shadow: 10px 10px;
+
+                    h2 {
+                        p {
+                            display: inline;
+                            color: $price-color;
+                            border-bottom: 5px solid $price-color;
+                            padding-bottom: 1px;
+                            font-family: $font-menu-brushJP;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    h3 {
+                        color: red;
+                        font-size: 2rem;
+                        font-family: $font-main-NUM-handwriting;
+                        margin-top: 8.7px;
+                    }
                 }
 
                 .image {
@@ -765,6 +854,14 @@ main {
                 height: 50%;
                 margin-bottom: 8%;
 
+                .sakeName {
+                    p {
+                        display: inline;
+                        color: red;
+                        font-weight: bolder;
+                    }
+                }
+
                 .sizes {
                     display: grid;
                     grid-template-columns: 50% 50%;
@@ -824,6 +921,10 @@ main {
 
 
 footer {
+    #socialMediaMobile {
+        display: none;
+    }
+
     position: relative;
     display: flex;
     align-items: center;
@@ -832,6 +933,7 @@ footer {
     background-color: $color-main;
     color: $color-main-light;
     height: 8vh;
+    z-index: 0;
 
     h1 {
         display: flex;
@@ -841,7 +943,6 @@ footer {
     }
 
     p {
-        // font-family: $font-main-NUM-handwriting;
         font-family: $font-main-JP-handwriting;
         font-size: 2.5rem;
         padding-top: 4%;
@@ -985,7 +1086,7 @@ footer {
         justify-content: center;
         flex-direction: column;
         display: none;
-        margin-top: 30%;
+        margin-top: 34%;
         transition: all 0.5s ease;
 
         a {
@@ -1040,6 +1141,8 @@ footer {
                 margin: 0;
                 padding: 0;
                 margin-left: 10%;
+                font-size: 1rem;
+                line-height: 2rem;
             }
 
             .japaneseBarExplanation {
@@ -1047,10 +1150,6 @@ footer {
                     top: 10%;
                     bottom: 8%;
                 }
-
-                ;
-
-
             }
         }
 
@@ -1203,10 +1302,13 @@ footer {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         padding: {
                             left: 3%;
                             right: 3%;
-                        };
+                        }
+
+                        ;
                         width: 94%;
                         font-size: 81%;
                         text-align: justify;
@@ -1479,6 +1581,14 @@ footer {
                     display: flex;
                     flex-direction: column;
 
+                    .arrow1 {
+                        padding-top: 11px;
+
+                        h1 {
+                            transform: rotate(90deg);
+                        }
+                    }
+
                     .discount {
                         h2 {
                             font-size: 1rem;
@@ -1671,7 +1781,8 @@ footer {
                 flex-direction: column;
                 padding-top: 20px;
                 justify-content: center;
-                h1{
+
+                h1 {
                     padding-bottom: 3px;
                 }
 
@@ -1685,6 +1796,7 @@ footer {
                         gap: 0;
                         padding: 0;
                         align-items: center;
+
                         h2:last-child {
                             font-size: 1.7rem;
                             padding-left: 17px;
@@ -1693,6 +1805,62 @@ footer {
 
                 }
             }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: $color-main;
+        gap: 16%;
+        height: 13vh;
+
+        #socialMediaMobile {
+            display: block;
+            margin-bottom: 4%;
+            padding-top: 1%;
+
+            button {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 0;
+                margin: 0;
+
+                i {
+                    color: $color-main-light;
+                    font-size: 1.5rem;
+                    margin: 0 1rem;
+                }
+            }
+
+            button:hover {
+                .fa-instagram {
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .fa-facebook {
+                    background: #2372a3;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+
+        h1,
+        p {
+            color: $color-main-light;
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 1.7rem;
         }
     }
 }

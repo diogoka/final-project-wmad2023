@@ -24,13 +24,15 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-rows: 40% 33% 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   background-color: #00040d;
-  height: 100vh;
-  width: 20vw;
+  height: 100%;
+  width: 20%;
   grid-area: header;
+  z-index: 1;
 }
 header button {
   background-color: #00040d;
@@ -40,17 +42,82 @@ header button {
   font-size: 3rem;
   padding: 0.5rem;
   cursor: pointer;
-  margin: 0;
 }
 header .buttons {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 3rem;
   align-items: center;
   cursor: pointer;
+  padding-bottom: 9px;
 }
-header .buttons button:hover {
-  color: #00308f;
+header .buttons .lines {
+  height: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 18px 84px 21px 75px;
+}
+header .buttons .lines .lineEffect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fafafa;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms;
+  border-radius: 86% 4% 80% 40%;
+}
+header .buttons .lines .lineEffect1 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect2 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect3 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect4 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect5 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect6 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect7 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect8 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect9 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect10 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect11 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect12 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect13 {
+  height: 1.5px;
+}
+header #orderButton .lines .lineEffect {
+  transform: scaleX(1);
+}
+header .buttonHeader:hover .lineEffect {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 header .logo {
   padding-top: 3.5rem;
@@ -61,14 +128,40 @@ header .logo {
 header .socialMedia {
   display: flex;
   justify-content: center;
-  /* margin: auto; */
+  align-items: center;
   gap: 2rem;
+  padding-bottom: 45px;
 }
-
-header .socialMedia i {
+header .socialMedia button {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+}
+header .socialMedia button i {
   font-size: 2rem;
-  color: white;
-  /* margin: auto; */
+}
+header .socialMedia button:hover .fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .socialMedia button:hover .fa-facebook-f {
+  background: #2372a3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .titleMobile,
+header .dropdown {
+  display: none;
 }
 
 main {
