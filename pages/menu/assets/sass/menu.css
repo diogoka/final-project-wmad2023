@@ -49,8 +49,8 @@ header {
   grid-template-rows: 40% 33% 25%;
   position: fixed;
   background-color: #00040d;
-  height: 100vh;
-  width: 20vw;
+  height: 100%;
+  width: 20%;
   grid-area: header;
 }
 header button {
@@ -150,6 +150,8 @@ main .bar::before {
   opacity: 0.5;
 }
 main .buttonsMenu {
+  position: sticky;
+  top: 0;
   background-color: #c6c6d0;
   height: 20vh;
   margin-left: 3%;
@@ -161,10 +163,17 @@ main .buttonsMenu {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main .buttonsMenu .misoButton, main .buttonsMenu .darkMisoButton, main .buttonsMenu .umamiButton, main .buttonsMenu .giozaButton, main .buttonsMenu .spicyMisoButton {
+main .buttonsMenu .misoButton,
+main .buttonsMenu .darkMisoButton,
+main .buttonsMenu .umamiButton,
+main .buttonsMenu .giozaButton,
+main .buttonsMenu .spicyMisoButton {
   color: #fafafa;
 }
-main .buttonsMenu .shoyuButton, main .buttonsMenu .topingsButton, main .buttonsMenu .tanreiButton, main .buttonsMenu .beverages {
+main .buttonsMenu .shoyuButton,
+main .buttonsMenu .topingsButton,
+main .buttonsMenu .tanreiButton,
+main .buttonsMenu .beverages {
   color: #00040d;
 }
 main .buttonsMenu ul {
@@ -440,7 +449,8 @@ main .giozaChasuBits .chasuBits .giozaInfo p,
 main .giozaChasuBits .chasuBits .chasuInfo p {
   color: red;
 }
-main .giozaChasuBits .gioza .imageGioza img, main .giozaChasuBits .gioza .chasuImage img,
+main .giozaChasuBits .gioza .imageGioza img,
+main .giozaChasuBits .gioza .chasuImage img,
 main .giozaChasuBits .chasuBits .imageGioza img,
 main .giozaChasuBits .chasuBits .chasuImage img {
   border-radius: 2%;
@@ -643,4 +653,650 @@ footer p {
   font-family: "brat", sans-serif;
   font-size: 2.5rem;
   padding-top: 4%;
+}
+
+@media only screen and (max-width: 390px) {
+  body {
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    width: 100%;
+    height: 18vh;
+    transition: all 0.5s ease;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  header .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo img {
+    width: 72%;
+  }
+  header .titleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9%;
+  }
+  header .titleMobile h1 {
+    font-family: "brat", sans-serif;
+    color: #fafafa;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  header .socialMedia,
+  header .buttons {
+    display: none;
+  }
+  header .dropdown {
+    position: relative;
+    display: inline;
+    padding-right: 1%;
+    transition: all 0.5s ease;
+  }
+  header .nav-button {
+    position: relative;
+    height: 2.4rem;
+    width: 2.8rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #fafafa;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.25s cubic-bezier(0.17, 0.67, 0.89, 1.4);
+    transition-property: transform;
+    will-change: transform;
+  }
+  header .nav-button::before,
+  header .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 5px;
+    background: currentColor;
+    transition: 0.25s;
+    transition-property: transform, top;
+    will-change: transform, top;
+  }
+  header .nav-button::before {
+    top: 0;
+  }
+  header .nav-button::after {
+    top: calc(100% - 4px);
+  }
+  header .transform2:before {
+    width: 60%;
+    transform: rotate(-45deg) translate3d(-48%, 0, 0);
+  }
+  header .transform1:after {
+    width: 60%;
+    transform: rotate(45deg) translate3d(-48%, 0, 0);
+  }
+  .dropContent {
+    position: absolute;
+    background-color: #00040d;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    margin-top: 30%;
+    transition: all 0.5s ease;
+  }
+  .dropContent a {
+    color: #fafafa;
+    font-size: 1rem;
+    width: 100%;
+    padding: 4% 0%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropContent a:hover {
+    background-color: #fafafa;
+    color: #00040d;
+  }
+  main .bar {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  main .bar .menuTitle {
+    padding: 0;
+    margin-top: 7%;
+    margin-bottom: 6%;
+  }
+  main .bar .menuTitle h1 {
+    display: block;
+    padding: 0;
+    font-size: 4rem;
+  }
+  main .bar .englishBarExplanation,
+  main .bar .japaneseBarExplanation {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 10%;
+  }
+  main .bar .japaneseBarExplanation {
+    margin-top: 10%;
+    margin-bottom: 8%;
+  }
+  main .buttonsMenu {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-position: left;
+    background-repeat: repeat;
+    background-size: initial;
+    position: relative;
+  }
+  main .buttonsMenu .listPlates {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: 3%;
+    padding-right: 3%;
+    overflow: hidden;
+    row-gap: 1.1rem;
+  }
+  main .buttonsMenu .listPlates li {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  main .buttonsMenu .listPlates li button {
+    color: #00040d !important;
+    letter-spacing: 0.05em;
+  }
+  main .buttonsMenu .listPlates li:nth-child(even) button {
+    color: #fafafa !important;
+    width: 40%;
+  }
+  main .buttonsMenu .listPlates li:nth-child(even) button::after {
+    background: #fafafa !important;
+  }
+  main .plates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .plates #darkMiso .plateInfo .plateJapanese p {
+    font-size: 2.5rem;
+  }
+  main .plates #spicyMiso .plateInfo .plateJapanese {
+    margin: 0;
+    padding: 0;
+    grid-row-start: 2;
+  }
+  main .plates #spicyMiso .plateInfo .platePrice {
+    display: flex;
+    padding-right: 4.5%;
+    align-items: center;
+  }
+  main .plates #spicyMiso .plateInfo .platePrice .platePriceUL {
+    display: flex;
+    flex-direction: row;
+    gap: 0.69rem;
+  }
+  main .plates #spicyMiso .plateInfo .platePrice .platePriceUL li h3 {
+    font-size: 0.6rem;
+  }
+  main .plates #spicyMiso .plateInfo .platePrice .platePriceUL li h2 {
+    line-height: 100%;
+    font-size: 2.5rem;
+  }
+  main .plates .line {
+    width: 100%;
+  }
+  main .plates .plate {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+  }
+  main .plates .plate .plateName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-right: 4%;
+  }
+  main .plates .plate .plateName h1 {
+    line-height: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  main .plates .plate .plateInfo {
+    display: grid;
+    grid-template-rows: repeat(5, minmax(min-content, max-content));
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "desc desc" "img jap" "none jap" "ingred ingred" "price price";
+    grid-row-gap: 10px;
+  }
+  main .plates .plate .plateInfo .plateDescription {
+    grid-area: desc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 89%;
+    font-size: 81%;
+    text-align: justify;
+  }
+  main .plates .plate .plateInfo .plateImage {
+    grid-area: img;
+    width: 100%;
+    padding-left: 16%;
+  }
+  main .plates .plate .plateInfo .plateJapanese {
+    grid-area: jap;
+    display: flex;
+  }
+  main .plates .plate .plateInfo .plateJapanese p {
+    font-size: 4rem;
+  }
+  main .plates .plate .plateInfo .plateIngredients {
+    grid-area: ingred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    width: 89%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    text-align: justify;
+    margin-top: 4%;
+    line-height: 1rem;
+  }
+  main .plates .plate .plateInfo .platePrice {
+    grid-area: price;
+    gap: 0;
+    align-items: flex-end;
+    padding-right: 8%;
+    gap: 7%;
+  }
+  main .plates .plate .plateInfo .platePrice h2 {
+    font-size: 3.4rem;
+    line-height: 100%;
+    margin-top: 2%;
+  }
+  main .plates .plate .plateInfo .platePrice p {
+    font-size: 0.6rem;
+  }
+  main .extraTopings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    padding: 0;
+  }
+  main .extraTopings .extraTopingsTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 0;
+    padding-bottom: 5%;
+    margin: 0;
+  }
+  main .extraTopings .extraTopingsTitle h1 {
+    font-size: 3.5rem;
+    line-height: 100%;
+    text-align: start;
+  }
+  main .extraTopings .topings {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 1.1rem;
+    display: grid;
+    row-gap: 21px;
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    grid-template-columns: 100%;
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  main .extraTopings .topings #pork {
+    grid-column: span 1;
+  }
+  main .extraTopings .topings .toping,
+  main .extraTopings .topings #pork {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "name img" "price img";
+  }
+  main .extraTopings .topings .toping h1,
+  main .extraTopings .topings #pork h1 {
+    grid-area: name;
+    font-size: 100%;
+  }
+  main .extraTopings .topings .toping .topingPrice,
+  main .extraTopings .topings #pork .topingPrice {
+    grid-area: price;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .extraTopings .topings .toping .topingPrice h2,
+  main .extraTopings .topings #pork .topingPrice h2 {
+    font-size: 1.5rem;
+    line-height: 100%;
+  }
+  main .extraTopings .topings .toping .topingPrice p,
+  main .extraTopings .topings #pork .topingPrice p {
+    font-size: 68%;
+  }
+  main .extraTopings .topings .toping .topingImage,
+  main .extraTopings .topings #pork .topingImage {
+    grid-area: img;
+    width: 78%;
+    box-shadow: 0px 0px 0px;
+    justify-content: flex-end;
+  }
+  main .extraTopings .topings .toping .topingImage img,
+  main .extraTopings .topings #pork .topingImage img {
+    width: 78%;
+  }
+  main .extraTopings .topings #seaweed h1 {
+    font-size: 95%;
+  }
+  main .giozaChasuBits {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+  }
+  main .giozaChasuBits .gioza {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+  main .giozaChasuBits .gioza .giozaInfo h1 {
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .gioza .giozaInfo .priceAndDescription {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  main .giozaChasuBits .gioza .giozaInfo .priceAndDescription h2 {
+    font-size: 1.04rem;
+    line-height: 100%;
+    margin-bottom: 5px;
+  }
+  main .giozaChasuBits .gioza .imageGioza img {
+    margin-top: 7%;
+    width: 79%;
+  }
+  main .giozaChasuBits .chasuBits {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    padding-top: 28px;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo {
+    width: 87%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo h1 {
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription h2 {
+    font-size: 1.04rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription h2:first-child {
+    width: 74%;
+    line-height: 23px;
+  }
+  main .giozaChasuBits .chasuBits .chasuImage {
+    padding-right: 32px;
+  }
+  main .giozaChasuBits .chasuBits .chasuImage img {
+    width: 100%;
+  }
+  main .beverages {
+    padding-top: 5px;
+  }
+  main .beverages h1 {
+    font-size: 3.5rem;
+    line-height: 100%;
+    text-align: start;
+    padding-bottom: 13px;
+  }
+  main .beverages .promotionBeerGrid {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer {
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .discount h2 {
+    font-size: 1rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image {
+    gap: 14px;
+    padding-top: 21px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image img:first-child {
+    border-radius: 5%;
+    width: 25%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image img {
+    width: 15%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image h1 {
+    padding: 0;
+    margin: 0;
+    height: 55%;
+    width: 11%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 3px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+    grid-template-areas: "name old arrow new" "set old arrow new";
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #name {
+    grid-area: name;
+    font-size: 1.09rem;
+    padding-top: 21%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #set {
+    grid-area: set;
+    font-size: 1.09rem;
+    padding-bottom: 22%;
+    text-align: center;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #oldprice {
+    grid-area: old;
+    font-size: 1.7rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #arrow {
+    grid-area: arrow;
+    transform: rotate(0deg);
+    font-size: 2rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #newprice {
+    grid-area: new;
+    font-size: 2.3rem;
+  }
+  main .beverages .beerGrid {
+    padding-top: 9px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .beerGrid h1 {
+    padding-bottom: 0;
+  }
+  main .beverages .beerGrid .beers {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+  }
+  main .beverages .beerGrid .beers .beer {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 33.3333%);
+    grid-template-areas: "name name name" "price img none";
+    -moz-column-gap: 0;
+         column-gap: 0;
+    padding-bottom: 3%;
+  }
+  main .beverages .beerGrid .beers .beer .beername {
+    grid-area: name;
+  }
+  main .beverages .beerGrid .beers .beer .beername h2 {
+    font-size: 1.04rem;
+  }
+  main .beverages .beerGrid .beers .beer .price {
+    grid-area: price;
+    justify-content: flex-end;
+    padding-top: 8px;
+  }
+  main .beverages .beerGrid .beers .beer .price h2 {
+    font-size: 1.7rem;
+  }
+  main .beverages .beerGrid .beers .beer .beerImage {
+    grid-area: img;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 8px;
+  }
+  main .beverages .beerGrid .beers .beer #asahi img {
+    width: 51%;
+  }
+  main .beverages .beerGrid .beers .beer #acres img {
+    width: 51%;
+  }
+  main .beverages .sakeGrid {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .sakeGrid .sakeInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  main .beverages .sakeGrid .sakeInfo .sakeName {
+    padding-left: 2%;
+    padding-bottom: 2%;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 27px;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes .smallSize,
+  main .beverages .sakeGrid .sakeInfo .sizes .largeSize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes h2:last-child {
+    font-size: 1.7rem;
+    padding-left: 12px;
+  }
+  main .beverages .nonAlcoholicGrid {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: center;
+  }
+  main .beverages .nonAlcoholicGrid h1 {
+    padding-bottom: 3px;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    justify-content: center;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription {
+    gap: 0;
+    padding: 0;
+    align-items: center;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription h2:last-child {
+    font-size: 1.7rem;
+    padding-left: 17px;
+  }
 }/*# sourceMappingURL=menu.css.map */

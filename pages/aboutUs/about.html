@@ -14,7 +14,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../../assets/images/logo.jpg" alt="logo">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo.jpg" alt="logo">
+            </a>
         </div>
         <div class="buttons">
             <button id="buttonAboutUS">About Us</button>
@@ -26,35 +28,62 @@
             <button><i class="fa fa-instagram"></i></button>
         </div>
 
+        <div class="titleMobile">
+            <h1>Tsukiya</h1>
+
+        </div>
+        <div class="teste">
+            
+            <div class="dropdown">
+                <button class="dropButton nav-button" type="button" id="toggle-button" aria-label="open/close navigation">
+            </div>
+        </div>
+
     </header>
 
+    <div class="dropContent">
+        <a href="../../index.html">Home</a>
+        <a href="../aboutUs/about.html">About Us</a>
+        <a href="../menu/menu.html">Menu</a>
+        <a href="../order/order.html">Order</a>
+    </div>
     <main>
         <div class="bar">
             <div class="title">
                 <h1>Tonkotsu Ramen Tsukiya</h1>
-                <h2>The best handmade tonkotsu(豚骨ラーメン)</h2>
+                <div class="subtitle">
+                    <h2>The best handmade tonkotsu</h2>
+                    <h2>(豚骨ラーメン)</h2>
+                </div>
             </div>
         </div>
         <div class="content">
             <div class="contentText">
                 <h1>
-                    Located near the beautiful Stanley Park in downtown westend, we specialize in home-made Tonkotsu (pork bones broth)
+                    Located near the beautiful Stanley Park in downtown westend, we specialize in home-made Tonkotsu
+                    (pork bones broth)
                     Ramen featuring a rich, flavourful broth and specially made chewy noodles.
                 </h1>
             </div>
             <div class="contentImage">
                 <div class="image">
-                    <img src="./assets/images/backgroungRestaurant.jpeg" alt="tsukiya">
+                    <img class="zoom" src="./assets/images/backgroungRestaurant.jpeg" alt="tsukiya">
                 </div>
             </div>
         </div>
     </main>
-    <footer>
+
+    <footer id="footer">
         <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
+        <div class="socialMedia" id="socialMediaMobile">
+            <button><i class="fa fa-facebook"></i></button>
+            <button><i class="fa fa-instagram"></i></button>
+        </div>
     </footer>
 </body>
 
 
 <script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>
+<script src="./assets/js/about.js"></script>
 
 </html>
