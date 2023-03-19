@@ -60,14 +60,13 @@ header .logo {
 header .socialMedia {
   display: flex;
   justify-content: center;
-  /* margin: auto; */
+  margin: auto;
   gap: 2rem;
 }
 
 header .socialMedia i {
   font-size: 2rem;
   color: white;
-  /* margin: auto; */
 }
 
 

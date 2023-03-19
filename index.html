@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/homepage.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Home</title>
 </head>
 <body>
     <header>
@@ -14,28 +16,27 @@
             <img src="../assets/images/logo.jpg" alt="">    
         </div>
         <div class="buttons">
-            <div class="button">
-                <button onclick="location.href='https://www.youtube.com/'">About us</button>
-            </div>
-            <div class="button">
-                <button onclick="location.href=''">Menu</button>
-            </div>
-            <div class="button">
-                <button onclick="location.href=''">Order</button>
-            </div>
+            <button type="button" onclick="window.location.href='../aboutUs/about.html';">About Us</button>
+            <button type="button" onclick="window.location.href='../menu/menu.html';">Menu</button>
+            <button id="buttonOrder">Order</button>
         </div>
-        <div class ="sns-icons">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/tsukiya_tonkotsu_ramen/"><i class="fab fa-instagram"></i></a>
+        <div class="socialMedia">
+            <button><i class="fab fa-facebook-f"></i></button>
+            <button><i class="fab fa-instagram"></i></button>
         </div>
     </header>
     <main>
         <h1>Tonkotsu Ramen Tsukiya</h1>
         <div class ="buttons in-main">
-            <button onclick="location.href='URL'">About us</button>
-            <button onclick="location.href='URL'">Menu</button>
-            <button onclick="location.href='URL'">Order</button>
-
+            <div class="buttonInMain">
+                <button onclick="location.href='URL'">ABOUT US</button>
+            </div>
+            <div class="buttonInMain">
+                <button onclick="location.href='URL'">MENU</button>
+            </div>
+            <div class="buttonInMain">
+                <button onclick="location.href='URL'">ORDER</button>
+            </div>
         </div>
     </main>
     <footer>
