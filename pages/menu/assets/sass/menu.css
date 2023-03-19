@@ -49,8 +49,8 @@ header {
   grid-template-rows: 40% 33% 25%;
   position: fixed;
   background-color: #00040d;
-  height: 100vh;
-  width: 20vw;
+  height: 100%;
+  width: 20%;
   grid-area: header;
 }
 header button {
@@ -662,6 +662,7 @@ footer p {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
   }
   header {
     display: grid;
@@ -671,7 +672,7 @@ footer p {
     justify-content: center;
     align-items: center;
     position: inherit;
-    width: 100vw;
+    width: 100%;
     height: 18vh;
     transition: all 0.5s ease;
   }
@@ -760,7 +761,7 @@ footer p {
   .dropContent {
     position: absolute;
     background-color: #00040d;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     display: flex;
@@ -775,7 +776,7 @@ footer p {
     color: #fafafa;
     font-size: 1rem;
     width: 100%;
-    padding: 12px 16px;
+    padding: 4% 0%;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -870,9 +871,8 @@ footer p {
   }
   main .plates #spicyMiso .plateInfo .platePrice {
     display: flex;
-    padding-right: 4%;
-    padding-left: 4%;
-    align-items: flex-end;
+    padding-right: 4.5%;
+    align-items: center;
   }
   main .plates #spicyMiso .plateInfo .platePrice .platePriceUL {
     display: flex;
@@ -903,6 +903,7 @@ footer p {
     justify-content: center;
     align-items: center;
     padding: 0;
+    padding-right: 4%;
   }
   main .plates .plate .plateName h1 {
     line-height: 100%;
@@ -923,7 +924,7 @@ footer p {
     align-items: center;
     padding-left: 3%;
     padding-right: 3%;
-    width: 93%;
+    width: 89%;
     font-size: 81%;
     text-align: justify;
   }
@@ -935,7 +936,6 @@ footer p {
   main .plates .plate .plateInfo .plateJapanese {
     grid-area: jap;
     display: flex;
-    padding-top: 12%;
   }
   main .plates .plate .plateInfo .plateJapanese p {
     font-size: 4rem;
@@ -946,9 +946,11 @@ footer p {
     justify-content: center;
     align-items: center;
     font-size: 70%;
-    padding: 0;
+    width: 89%;
     padding-left: 3%;
     padding-right: 3%;
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 0;
     text-align: justify;
     margin-top: 4%;
@@ -968,5 +970,333 @@ footer p {
   }
   main .plates .plate .plateInfo .platePrice p {
     font-size: 0.6rem;
+  }
+  main .extraTopings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    padding: 0;
+  }
+  main .extraTopings .extraTopingsTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 0;
+    padding-bottom: 5%;
+    margin: 0;
+  }
+  main .extraTopings .extraTopingsTitle h1 {
+    font-size: 3.5rem;
+    line-height: 100%;
+    text-align: start;
+  }
+  main .extraTopings .topings {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 1.1rem;
+    display: grid;
+    row-gap: 21px;
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    grid-template-columns: 100%;
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  main .extraTopings .topings #pork {
+    grid-column: span 1;
+  }
+  main .extraTopings .topings .toping,
+  main .extraTopings .topings #pork {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "name img" "price img";
+  }
+  main .extraTopings .topings .toping h1,
+  main .extraTopings .topings #pork h1 {
+    grid-area: name;
+    font-size: 100%;
+  }
+  main .extraTopings .topings .toping .topingPrice,
+  main .extraTopings .topings #pork .topingPrice {
+    grid-area: price;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .extraTopings .topings .toping .topingPrice h2,
+  main .extraTopings .topings #pork .topingPrice h2 {
+    font-size: 1.5rem;
+    line-height: 100%;
+  }
+  main .extraTopings .topings .toping .topingPrice p,
+  main .extraTopings .topings #pork .topingPrice p {
+    font-size: 68%;
+  }
+  main .extraTopings .topings .toping .topingImage,
+  main .extraTopings .topings #pork .topingImage {
+    grid-area: img;
+    width: 78%;
+    box-shadow: 0px 0px 0px;
+    justify-content: flex-end;
+  }
+  main .extraTopings .topings .toping .topingImage img,
+  main .extraTopings .topings #pork .topingImage img {
+    width: 78%;
+  }
+  main .extraTopings .topings #seaweed h1 {
+    font-size: 95%;
+  }
+  main .giozaChasuBits {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+  }
+  main .giozaChasuBits .gioza {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+  main .giozaChasuBits .gioza .giozaInfo h1 {
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .gioza .giozaInfo .priceAndDescription {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  main .giozaChasuBits .gioza .giozaInfo .priceAndDescription h2 {
+    font-size: 1.04rem;
+    line-height: 100%;
+    margin-bottom: 5px;
+  }
+  main .giozaChasuBits .gioza .imageGioza img {
+    margin-top: 7%;
+    width: 79%;
+  }
+  main .giozaChasuBits .chasuBits {
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    padding-top: 28px;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo {
+    width: 87%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo h1 {
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription h2 {
+    font-size: 1.04rem;
+    line-height: 100%;
+  }
+  main .giozaChasuBits .chasuBits .chasuInfo .priceAndDescription h2:first-child {
+    width: 74%;
+    line-height: 23px;
+  }
+  main .giozaChasuBits .chasuBits .chasuImage {
+    padding-right: 32px;
+  }
+  main .giozaChasuBits .chasuBits .chasuImage img {
+    width: 100%;
+  }
+  main .beverages {
+    padding-top: 5px;
+  }
+  main .beverages h1 {
+    font-size: 3.5rem;
+    line-height: 100%;
+    text-align: start;
+    padding-bottom: 13px;
+  }
+  main .beverages .promotionBeerGrid {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer {
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .discount h2 {
+    font-size: 1rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image {
+    gap: 14px;
+    padding-top: 21px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image img:first-child {
+    border-radius: 5%;
+    width: 25%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image img {
+    width: 15%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .image h1 {
+    padding: 0;
+    margin: 0;
+    height: 55%;
+    width: 11%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 3px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+    grid-template-areas: "name old arrow new" "set old arrow new";
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #name {
+    grid-area: name;
+    font-size: 1.09rem;
+    padding-top: 21%;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #set {
+    grid-area: set;
+    font-size: 1.09rem;
+    padding-bottom: 22%;
+    text-align: center;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #oldprice {
+    grid-area: old;
+    font-size: 1.7rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #arrow {
+    grid-area: arrow;
+    transform: rotate(0deg);
+    font-size: 2rem;
+  }
+  main .beverages .promotionBeerGrid .promotionGiozaBeer .gridPromotionPrice .promotionPrice #newprice {
+    grid-area: new;
+    font-size: 2.3rem;
+  }
+  main .beverages .beerGrid {
+    padding-top: 9px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .beerGrid h1 {
+    padding-bottom: 0;
+  }
+  main .beverages .beerGrid .beers {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7px;
+  }
+  main .beverages .beerGrid .beers .beer {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 33.3333%);
+    grid-template-areas: "name name name" "price img none";
+    -moz-column-gap: 0;
+         column-gap: 0;
+    padding-bottom: 3%;
+  }
+  main .beverages .beerGrid .beers .beer .beername {
+    grid-area: name;
+  }
+  main .beverages .beerGrid .beers .beer .beername h2 {
+    font-size: 1.04rem;
+  }
+  main .beverages .beerGrid .beers .beer .price {
+    grid-area: price;
+    justify-content: flex-end;
+    padding-top: 8px;
+  }
+  main .beverages .beerGrid .beers .beer .price h2 {
+    font-size: 1.7rem;
+  }
+  main .beverages .beerGrid .beers .beer .beerImage {
+    grid-area: img;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 8px;
+  }
+  main .beverages .beerGrid .beers .beer #asahi img {
+    width: 51%;
+  }
+  main .beverages .beerGrid .beers .beer #acres img {
+    width: 51%;
+  }
+  main .beverages .sakeGrid {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .beverages .sakeGrid .sakeInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  main .beverages .sakeGrid .sakeInfo .sakeName {
+    padding-left: 2%;
+    padding-bottom: 2%;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 27px;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes .smallSize,
+  main .beverages .sakeGrid .sakeInfo .sizes .largeSize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  main .beverages .sakeGrid .sakeInfo .sizes h2:last-child {
+    font-size: 1.7rem;
+    padding-left: 12px;
+  }
+  main .beverages .nonAlcoholicGrid {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: center;
+  }
+  main .beverages .nonAlcoholicGrid h1 {
+    padding-bottom: 3px;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    justify-content: center;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription {
+    gap: 0;
+    padding: 0;
+    align-items: center;
+  }
+  main .beverages .nonAlcoholicGrid .softDrinks .softDrinkDescription h2:last-child {
+    font-size: 1.7rem;
+    padding-left: 17px;
   }
 }/*# sourceMappingURL=menu.css.map */

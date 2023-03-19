@@ -74,8 +74,8 @@ header {
     grid-template-rows: 40% 33% 25%;
     position: fixed;
     background-color: $color-main;
-    height: 100vh;
-    width: 20vw;
+    height: 100%;
+    width: 20%;
     grid-area: header;
 
     button {
@@ -855,6 +855,7 @@ footer {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
 
     }
 
@@ -866,7 +867,7 @@ footer {
         justify-content: center;
         align-items: center;
         position: inherit;
-        width: 100vw;
+        width: 100%;
         height: 18vh;
         transition: all 0.5s ease;
 
@@ -975,7 +976,7 @@ footer {
     .dropContent {
         position: absolute;
         background-color: $color-main;
-        width: 100vw;
+        width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         display: flex;
@@ -990,7 +991,7 @@ footer {
             color: $color-main-light;
             font-size: 1rem;
             width: 100%;
-            padding: 12px 16px;
+            padding: 4% 0%;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -1111,39 +1112,45 @@ footer {
             justify-content: center;
             align-items: center;
 
-            #darkMiso{
-                .plateInfo{
-                    .plateJapanese{
-                        p{
+            #darkMiso {
+                .plateInfo {
+                    .plateJapanese {
+                        p {
                             font-size: 2.5rem;
                         }
                     }
                 }
             }
 
-            #spicyMiso{
-                .plateInfo{
-                    .plateJapanese{
+            #spicyMiso {
+                .plateInfo {
+                    .plateJapanese {
                         margin: 0;
                         padding: 0;
                         grid-row-start: 2;
                     }
-                    .platePrice{
+
+                    .platePrice {
                         display: flex;
+
                         padding: {
-                            right: 4%;
-                            left: 4%;
-                        };
-                        align-items: flex-end;
-                        .platePriceUL{
+                            right: 4.5%;
+                        }
+
+                        ;
+                        align-items: center;
+
+                        .platePriceUL {
                             display: flex;
                             flex-direction: row;
                             gap: 0.69rem;
-                            li{
-                                h3{
+
+                            li {
+                                h3 {
                                     font-size: 0.6rem;
                                 }
-                                h2{
+
+                                h2 {
                                     line-height: 100%;
                                     font-size: 2.5rem;
                                 }
@@ -1153,7 +1160,7 @@ footer {
                 }
             }
 
-            .line{
+            .line {
                 width: 100%;
             }
 
@@ -1171,6 +1178,7 @@ footer {
                     justify-content: center;
                     align-items: center;
                     padding: 0;
+                    padding-right: 4%;
 
                     h1 {
                         line-height: 100%;
@@ -1186,7 +1194,7 @@ footer {
                     grid-template-areas:
                         "desc desc" "img jap" "none jap" "ingred ingred" "price price";
                     grid-row-gap: 10px;
-                    
+
 
                     .plateDescription {
                         grid-area: desc;
@@ -1200,7 +1208,7 @@ footer {
                         }
 
                         ;
-                        width: 93%;
+                        width: 89%;
                         font-size: 81%;
                         text-align: justify;
                     }
@@ -1214,7 +1222,6 @@ footer {
                     .plateJapanese {
                         grid-area: jap;
                         display: flex;
-                        padding-top: 12%;
 
                         p {
                             font-size: 4rem;
@@ -1227,11 +1234,17 @@ footer {
                         justify-content: center;
                         align-items: center;
                         font-size: 70%;
-                        padding: 0;
+                        width: 89%;
+                        ;
+
                         padding: {
                             left: 3%;
                             right: 3%;
-                        };
+                            top: 0;
+                            bottom: 0;
+                        }
+
+                        ;
                         margin: 0;
                         text-align: justify;
                         margin-top: 4%;
@@ -1244,12 +1257,14 @@ footer {
                         align-items: flex-end;
                         padding-right: 8%;
                         gap: 7%;
-                        h2{
+
+                        h2 {
                             font-size: 3.4rem;
                             line-height: 100%;
                             margin-top: 2%;
                         }
-                        p{
+
+                        p {
                             font-size: 0.6rem;
                         }
                     }
@@ -1258,6 +1273,432 @@ footer {
             }
 
         }
+
+
+        .extraTopings {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0;
+            padding: 0;
+
+            .extraTopingsTitle {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                padding: {
+                    top: 0;
+                    left: 3%;
+                    right: 0;
+                    bottom: 5%;
+                }
+
+                margin: 0;
+
+                h1 {
+                    font-size: 3.5rem;
+                    line-height: 100%;
+                    text-align: start;
+                }
+
+            }
+
+            .topings {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                row-gap: 1.1rem;
+
+
+                display: grid;
+                row-gap: 21px;
+                grid-template-rows: repeat(6, minmax(min-content, max-content));
+                grid-template-columns: 100%;
+
+
+                padding: {
+                    top: 0;
+                    left: 3%;
+                    right: 3%;
+                    bottom: 0;
+                }
+
+                margin: 0;
+
+                #pork {
+                    grid-column: span 1;
+                }
+
+                .toping,
+                #pork {
+                    display: grid;
+                    grid-template-rows: repeat(2, minmax(min-content, max-content));
+                    grid-template-columns: repeat(2, 50%);
+                    grid-template-areas:
+                        "name img" "price img";
+
+                    h1 {
+                        grid-area: name;
+                        font-size: 100%;
+                    }
+
+                    .topingPrice {
+                        grid-area: price;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        h2 {
+                            font-size: 1.5rem;
+                            line-height: 100%;
+                        }
+
+                        p {
+                            font-size: 68%;
+                        }
+                    }
+
+                    .topingImage {
+                        grid-area: img;
+                        width: 78%;
+                        box-shadow: 0px 0px 0px;
+                        justify-content: flex-end;
+
+                        img {
+                            width: 78%;
+                        }
+                    }
+
+
+                }
+
+                #seaweed {
+                    h1 {
+                        font-size: 95%;
+                    }
+                }
+            }
+        }
+
+
+        .giozaChasuBits {
+            display: flex;
+            flex-direction: column;
+            padding-top: 5px;
+
+            .gioza {
+                grid-template-columns: repeat(2, minmax(min-content, max-content));
+                column-gap: 32px;
+
+                .giozaInfo {
+                    h1 {
+                        font-size: 2.8rem;
+                        line-height: 100%;
+                    }
+
+                    .priceAndDescription {
+                        padding-left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        h2 {
+                            font-size: 1.04rem;
+                            line-height: 100%;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+
+                .imageGioza {
+                    img {
+                        margin-top: 7%;
+                        width: 79%;
+                    }
+                }
+
+            }
+
+            .chasuBits {
+                grid-template-columns: repeat(2, minmax(min-content, max-content));
+                padding-top: 28px;
+
+                .chasuInfo {
+                    width: 87%;
+
+                    h1 {
+                        font-size: 2.8rem;
+                        line-height: 100%;
+                    }
+
+                    .priceAndDescription {
+                        padding-left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        h2 {
+                            font-size: 1.04rem;
+                            line-height: 100%;
+                        }
+
+                        h2:first-child {
+                            width: 74%;
+                            line-height: 23px;
+                        }
+                    }
+                }
+
+                .chasuImage {
+                    padding-right: 32px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .beverages {
+            padding-top: 5px;
+
+            h1 {
+                font-size: 3.5rem;
+                line-height: 100%;
+                text-align: start;
+                padding-bottom: 13px;
+            }
+
+            .promotionBeerGrid {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                width: 95%;
+
+                .promotionGiozaBeer {
+                    display: flex;
+                    flex-direction: column;
+
+                    .discount {
+                        h2 {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .image {
+                        gap: 14px;
+                        padding-top: 21px;
+
+                        img:first-child {
+                            border-radius: 5%;
+                            width: 25%;
+                        }
+
+                        img {
+                            width: 15%;
+                        }
+
+                        h1 {
+                            padding: 0;
+                            margin: 0;
+                            height: 55%;
+                            width: 11%;
+                        }
+                    }
+
+                    .gridPromotionPrice {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        margin: 0;
+                        padding-top: 3px;
+
+                        .promotionPrice {
+                            display: grid;
+                            grid-template-rows: repeat(2, minmax(min-content, max-content));
+                            grid-template-columns: repeat(4, minmax(min-content, max-content));
+                            grid-template-areas: "name old arrow new" "set old arrow new";
+                            column-gap: 15px;
+
+                            #name {
+                                grid-area: name;
+                                font-size: 1.09rem;
+                                padding-top: 21%;
+                            }
+
+                            #set {
+                                grid-area: set;
+                                font-size: 1.09rem;
+                                padding-bottom: 22%;
+                                text-align: center;
+                            }
+
+                            #oldprice {
+                                grid-area: old;
+                                font-size: 1.7rem;
+                            }
+
+                            #arrow {
+                                grid-area: arrow;
+                                transform: rotate(0deg);
+                                font-size: 2rem;
+                            }
+
+                            #newprice {
+                                grid-area: new;
+                                font-size: 2.3rem;
+
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+
+            .beerGrid {
+                padding-top: 9px;
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    padding-bottom: 0;
+                }
+
+                .beers {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 7px;
+
+                    .beer {
+                        display: grid;
+                        grid-template-rows: repeat(2, minmax(min-content, max-content));
+                        grid-template-columns: repeat(3, 33.3333%);
+                        grid-template-areas:
+                            "name name name"
+                            "price img none";
+                        column-gap: 0;
+                        padding-bottom: 3%;
+
+                        .beername {
+                            grid-area: name;
+
+                            h2 {
+                                font-size: 1.04rem;
+                            }
+                        }
+
+                        .price {
+                            grid-area: price;
+                            justify-content: flex-end;
+                            padding-top: 8px;
+
+                            h2 {
+                                font-size: 1.7rem;
+                            }
+                        }
+
+                        .beerImage {
+                            grid-area: img;
+                            display: flex;
+                            width: 100%;
+                            justify-content: flex-start;
+                            padding-top: 8px;
+
+                        }
+
+                        #asahi {
+                            img {
+                                width: 51%;
+                            }
+                        }
+
+                        #acres {
+                            img {
+                                width: 51%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sakeGrid {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .sakeInfo {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                    padding: 0;
+
+                    .sakeName {
+                        padding: {
+                            left: 2%;
+                            bottom: 2%;
+                        }
+                    }
+
+                    .sizes {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        padding-left: 27px;
+
+                        .smallSize,
+                        .largeSize {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0;
+                        }
+
+                        h2:last-child {
+                            font-size: 1.7rem;
+                            padding-left: 12px;
+                        }
+                    }
+                }
+            }
+
+            .nonAlcoholicGrid {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                justify-content: center;
+                h1{
+                    padding-bottom: 3px;
+                }
+
+                .softDrinks {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 3%;
+                    justify-content: center;
+
+                    .softDrinkDescription {
+                        gap: 0;
+                        padding: 0;
+                        align-items: center;
+                        h2:last-child {
+                            font-size: 1.7rem;
+                            padding-left: 17px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+
+
     }
 
 

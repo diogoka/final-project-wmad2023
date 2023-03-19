@@ -36,10 +36,10 @@
 
     </header>
         <div class="dropContent">
-            <a href="../../index.html">Home</a>
-            <a href="../aboutUs/about.html">About Us</a>
-            <a href="../menu/menu.html">Menu</a>
-            <a href="../order/order.html">Order</a>
+            <a href="../../index.html">HOME</a>
+            <a href="../aboutUs/about.html">ABOUT US</a>
+            <a href="../menu/menu.html">MENU</a>
+            <a href="../order/order.html">ORDER</a>
         </div>
 
     <main>
@@ -54,7 +54,7 @@
             <p class="japaneseBarExplanation">7種類の野菜で作られた野菜ポタージュと
                 9時間じっくり煮込まれた豚骨スープを混ぜ合わせ、野菜の甘みで作られたこの店独自の豚骨スープ。</p>
         </div>
-        <div class="buttonsMenu">
+        <!-- <div class="buttonsMenu">
             <ul class="listPlates">
                 <li><button class="shoyuButton" type="button" onclick="window.location.href='#shoyu';">Shoyu</button></li>
                 <li><button class="misoButton" type="button" onclick="window.location.href='#miso';">Miso</button></li>
@@ -66,7 +66,7 @@
                 <li><button class="giozaButton" type="button" onclick="window.location.href='#giozaChasuBits';">Gioza/Chasu Bits</button></li>
                 <li><button class="beveragesButton" type="button" onclick="window.location.href='#beverages';">Beverages</button></li>
             </ul>
-        </div>
+        </div> -->
         <div class="line">
             <hr class="division">
         </div>
@@ -284,7 +284,7 @@
                         <img src="./assets/images/egg.jpeg" alt="topingEggPicture" class="topingImage">
                     </div>
                 </div>
-                <div class="toping">
+                <div class="toping" id="seaweed">
                     <h1>Nori (dried seaweed, 4pc)</h1>
                     <div class="topingPrice">
                         <h2>$2.30</h2>
@@ -329,7 +329,7 @@
         <div class="line">
             <hr class="division">
         </div>
-        <!-- <div class="giozaChasuBits" id="giozaChasuBits">
+        <div class="giozaChasuBits" id="giozaChasuBits">
             <div class="gioza">
                 <div class="giozaInfo">
                     <h1>Gioza</h1>
@@ -363,13 +363,12 @@
                 <div class="chasuImage">
                     <img class="chasuBitsImg" src="./assets/images/chasuBits.jpeg" alt="chasuBitsPicture">
                 </div>
-
             </div>
         </div>
         <div class="line">
             <hr class="division">
-        </div> -->
-        <!-- <div class="beverages" id="beverages">
+        </div>
+        <div class="beverages" id="beverages">
             <h1>Beverages</h1>
             <div class="promotionBeerGrid">
                 <div class="promotionGiozaBeer">
@@ -386,15 +385,15 @@
                         <img src="./assets/images/gioza.jpeg" alt="giozaPicture">
                         <h1>+</h1>
                         <img src="./assets/images/33acres.png" alt="33acresPicture">
-                        <img src="./assets/images/promotionGiozaBeer.jpeg" alt="">
+                        <!-- <img src="./assets/images/promotionGiozaBeer.jpeg" alt=""> -->
                     </div>
                     <div class="gridPromotionPrice">
                         <div class="promotionPrice">
-                            <h2>Beer & Gioza</h2>
-                            <h2>Set!</h2>
+                            <h2 id="name">Beer & Gioza</h2>
+                            <h2 id="set">Set!</h2>
                             <h2 id="oldprice">$12.05</h2>
                             <h2 id="arrow">-></h2>
-                            <h2>$8.90</h2>
+                            <h2 id="newprice">$8.90</h2>
                         </div>
                     </div>
                 </div>
@@ -456,12 +455,12 @@
                         <h2>$2.90</h2>
                     </div>
                     <div class="softDrinkDescription">
-                        <h2>hot Tea</h2>
+                        <h2>Hot Tea</h2>
                         <h2>$1.00</h2>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </main>
     <footer>
         <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
