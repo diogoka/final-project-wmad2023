@@ -5,36 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Order</title>
 </head>
 <body>
-    <div class ="side-nav">
-        <div class ="logo">
-            <img src="../assets/images/logo.jpg" alt="">    
-        </div>
+<header>
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../assets/images/logo.jpg" alt="logo">
+        </a>
+    </div>
+    <div class="buttons">
+        <button type="button" onclick="window.location.href='../aboutUs/about.html';">About Us</button>
+        <button type="button" onclick="window.location.href='../menu/menu.html';">Menu</button>
+        <button id="buttonOrder">Order</button>
+    </div>
+    <div class="socialMedia">
+        <button><i class="fab fa-facebook-f"></i></button>
+        <button><i class="fab fa-instagram"></i></button>
+    </div>
+</header>
+<main>
+    <div class="main-top">
+        <h1>TAKE OUT OR DELIVERY</h1>
+        <p>COME PICKUP FROM US OR HAVE OUR DELIVERY PARTNER COME TO YOU</p>
+    </div>
+    <div class="main-bottom">
+        <p class ="description">WE'RE HAPPY TO OFFER LOTS OF WAYS TO GET OUR DELICIOUS FOOD TO YOUR TABLE <br>
+            CHOOSE ONE OF THE OPTIONS BELOW FOR DELIVERY OR ORDER AHEAD TO PICKUP AND PAY IN PERSON.
+        </p>
+        <h3>DELIVERY</h3>
         <div class="buttons">
             <div class="button">
-                <button onclick="location.href='https://www.youtube.com/'">About us</button>
+                <div class="doordash">
+                    <button type="button" onclick="location.href='https://www.doordash.com'">DOORDASH</button>
+                </div>
+                <p>Order via our delivery partner DoorDash <br>
+                   <span>(additional fees may apply)</span> 
+                </p>
             </div>
             <div class="button">
-                <button onclick="location.href=''">Menu</button>
-            </div>
-            <div class="button">
-                <button onclick="location.href=''">Order</button>
+                <div class="ubereats">
+                    <button type="button" onclick="location.href='https://www.ubereats.com/ca/feed?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlZhbmNvdXZlciUyMFB1YmxpYyUyMExpYnJhcnklMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIxMTQ2MTZhOS1iYTVkLTY2YWYtM2ZlNS1hY2EyM2Q0YWY1NTQlMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ5LjI3OTk1NzYlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIzLjExNDc3MDUlN0Q%3D'">UBER EATS</button>
+                </div> 
+                <p>Order via our delivery partner UberEats <br>
+                    <span>(additional fees may apply)</span>
+                </p>
             </div>
         </div>
-        <div class ="sns-icons">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-        </div>
     </div>
-    <div class ="header">
-
-    </div>
-    <div class="main">
-
-    </div>
-    <div class="footer">
-        
-    </div>
-</body>
-</html>
+</main>
+<footer>
+    <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
+</footer>
