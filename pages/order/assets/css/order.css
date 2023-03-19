@@ -286,6 +286,7 @@ footer h1 {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  font-weight: lighter;
 }
 footer p {
   font-family: "brat", sans-serif;

@@ -19,3 +19,8 @@ dropButton.addEventListener('click', () => {
         return;
     }
 })
+
+
+window.addEventListener('load', () => {
+    console.log("Page loaded")
+})
