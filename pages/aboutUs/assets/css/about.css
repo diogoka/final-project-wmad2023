@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.no-transition * {
+  transition: none !important;
+}
+
 *,
 body {
   margin: 0;
@@ -291,6 +295,53 @@ footer p {
 }
 footer #socialMediaMobile {
   display: none;
+}
+
+.loader-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 70%;
+  background-color: #00040d;
+  align-items: center;
+  justify-content: center;
+  animation-name: fade;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 70%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 30%;
+  }
+  75% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.loader {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../../assets/images/logo_s.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media only screen and (max-width: 390px) {
