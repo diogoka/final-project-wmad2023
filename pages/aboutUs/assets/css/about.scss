@@ -29,8 +29,8 @@
 }
 
 @font-face {
-    font-family: "japaneseHandWriting";
-    src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+    font-family: "brushJapanese";
+    src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
 }
 
 $font-main-EN-regular: "chikaraEN-Regular", sans-serif;
@@ -39,7 +39,7 @@ $font-main-JP-regular: "chikaraJP-Regular", sans-serif;
 $font-main-JP-bold: "chikaraJP-Bold", sans-serif;
 $font-main-JP-handwriting: "brat", sans-serif;
 $font-main-NUM-handwriting: "numberHandWriting", sans-serif;
-$font-main-JAP-handwriting: "japaneseHandWriting", sans-serif;
+$font-menu-brushJP: "brushJapanese", sans-serif;
 
 $color-main: #00040d;
 $color-main-light: #fafafa;
@@ -69,13 +69,15 @@ body {
 }
 
 header {
-    display: grid;
-    grid-template-rows: 40% 33% 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     background-color: $color-main;
-    height: 100vh;
-    width: 20vw;
+    height: 100%;
+    width: 20%;
     grid-area: header;
+    z-index: 1;
 
     button {
         background-color: $color-main;
@@ -90,14 +92,61 @@ header {
     .buttons {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         gap: 3rem;
         align-items: center;
         cursor: pointer;
+        padding-bottom: 9px;
 
-        button:hover {
-            color: $price-color;
+        .lines {
+            height: 17px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            overflow: hidden;
+            border-radius: 18px 84px 21px 75px;
+
+
+
+            .lineEffect {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: $color-main-light;
+                position: relative;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 700ms;
+                //top esquerdo, top direito, baixo direito, baixo esquerdo
+                border-radius: 86% 4% 80% 40%;
+
+            }
+
+            @for $i from 1 through 13 {
+                .lineEffect#{$i} {
+                    height: 1.5px;
+                }
+            }
+        }
+
+
+    }
+
+    #aboutUsButton {
+        .lines {
+            .lineEffect {
+                transform: scaleX(1);
+            }
         }
     }
+
+    .buttonHeader:hover .lineEffect {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
 
     .logo {
         padding-top: 3.5rem;
@@ -109,15 +158,39 @@ header {
     .socialMedia {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
+        padding-bottom: 45px;
 
-        i {
-            font-size: 2rem;
+        button {
+            height: fit-content;
+
+            i {
+                font-size: 2rem;
+            }
         }
     }
 
-    .dropdown,
-    .titleMobile {
+    .socialMedia {
+        button:hover {
+            .fa-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .fa-facebook {
+                background: #2372a3;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .titleMobile,
+    .dropdown {
         display: none;
     }
 }
@@ -155,11 +228,16 @@ main {
                 font-size: 2.7rem;
             }
 
-            .subtitle{
+            .subtitle {
                 margin-top: 2%;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
+
+                h2:last-child {
+                    font-family: $font-menu-brushJP;
+                    font-size: 2rem;
+                }
             }
 
         }
@@ -214,10 +292,12 @@ main {
                     width: 53%
                 }
             }
-            .zoom{
+
+            .zoom {
                 transition: transform 0.3s;
             }
-            .zoom:hover{
+
+            .zoom:hover {
                 transform: scale(1.1);
             }
         }
@@ -249,7 +329,8 @@ footer {
         font-size: 2rem;
         padding-top: 4%;
     }
-    #socialMediaMobile{
+
+    #socialMediaMobile {
         display: none;
     }
 }
@@ -264,6 +345,7 @@ footer {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
 
     }
 
@@ -275,7 +357,7 @@ footer {
         justify-content: center;
         align-items: center;
         position: inherit;
-        width: 100vw;
+        width: 100%;
         height: 18vh;
         transition: all 0.5s ease;
 
@@ -384,7 +466,7 @@ footer {
     .dropContent {
         position: absolute;
         background-color: $color-main;
-        width: 100vw;
+        width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         display: flex;
@@ -392,14 +474,14 @@ footer {
         justify-content: center;
         flex-direction: column;
         display: none;
-        margin-top: 30%;
+        margin-top: 34%;
         transition: all 0.5s ease;
 
         a {
             color: $color-main-light;
             font-size: 1rem;
             width: 100%;
-            padding: 12px 16px;
+            padding: 4% 0%;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -419,22 +501,31 @@ footer {
 
         .bar {
             height: 100%;
+
             .title {
                 h1 {
                     text-align: center;
                     width: 61%;
                     line-height: 4rem;
-                    font-size: 3.1rem;
+                    font-size: 3rem;
                 }
-                .subtitle{
+
+                .subtitle {
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 5%;
-                    h2{
+                    align-items: center;
+
+                    h2 {
                         font-size: 1rem;
                     }
-                    h2:first-child{
+
+                    h2:first-child {
                         font-size: 2.2rem;
+                    }
+
+                    h2:last-child {
+                        font-size: 1.5rem;
                     }
                 }
 
@@ -445,28 +536,34 @@ footer {
         .content {
             flex-direction: column;
             height: 100%;
+
             .contentText {
                 padding-right: 10%;
                 padding-bottom: 5%;
                 padding-top: 9%;
+
                 h1 {
                     font-size: 0.8rem;
                 }
             }
-            .contentImage{
+
+            .contentImage {
                 display: flex;
                 justify-content: center;
-                .image{
+
+                .image {
                     width: 66%;
                     display: block;
                     margin-right: 11%;
                     margin-bottom: 10%;
-                    img{
+
+                    img {
                         width: 100%;
                         // padding: 0;
                     }
                 }
-            .zoom:hover {
+
+                .zoom:hover {
                     transform: scale(1);
                 }
             }
@@ -480,29 +577,51 @@ footer {
         background-color: $color-main;
         gap: 16%;
         height: 13vh;
-        #socialMediaMobile{
+
+        #socialMediaMobile {
             display: block;
             margin-bottom: 4%;
             padding-top: 1%;
-            button{
+
+            button {
                 background-color: transparent;
                 border: none;
                 outline: none;
                 cursor: pointer;
                 padding: 0;
                 margin: 0;
-                i{
+
+                i {
                     color: $color-main-light;
                     font-size: 1.5rem;
                     margin: 0 1rem;
                 }
+
+            }
+            button:hover {
+                .fa-instagram {
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .fa-facebook {
+                    background: #2372a3;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
         }
-        h1, p{
+
+        h1,
+        p {
             color: $color-main-light;
             font-size: 1rem;
         }
-        p{
+
+        p {
             font-size: 1.7rem;
         }
     }

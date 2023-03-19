@@ -23,8 +23,8 @@
   src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
 }
 @font-face {
-  font-family: "japaneseHandWriting";
-  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+  font-family: "brushJapanese";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
 }
 html {
   scroll-behavior: smooth;
@@ -45,13 +45,15 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-rows: 40% 33% 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   background-color: #00040d;
-  height: 100vh;
-  width: 20vw;
+  height: 100%;
+  width: 20%;
   grid-area: header;
+  z-index: 1;
 }
 header button {
   background-color: #00040d;
@@ -61,17 +63,82 @@ header button {
   font-size: 3rem;
   padding: 0.5rem;
   cursor: pointer;
-  margin: 0;
 }
 header .buttons {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 3rem;
   align-items: center;
   cursor: pointer;
+  padding-bottom: 9px;
 }
-header .buttons button:hover {
-  color: #00308F;
+header .buttons .lines {
+  height: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 18px 84px 21px 75px;
+}
+header .buttons .lines .lineEffect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fafafa;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms;
+  border-radius: 86% 4% 80% 40%;
+}
+header .buttons .lines .lineEffect1 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect2 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect3 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect4 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect5 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect6 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect7 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect8 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect9 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect10 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect11 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect12 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect13 {
+  height: 1.5px;
+}
+header #aboutUsButton .lines .lineEffect {
+  transform: scaleX(1);
+}
+header .buttonHeader:hover .lineEffect {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 header .logo {
   padding-top: 3.5rem;
@@ -82,13 +149,31 @@ header .logo {
 header .socialMedia {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
+  padding-bottom: 45px;
 }
-header .socialMedia i {
+header .socialMedia button {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header .socialMedia button i {
   font-size: 2rem;
 }
-header .dropdown,
-header .titleMobile {
+header .socialMedia button:hover .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .socialMedia button:hover .fa-facebook {
+  background: #2372a3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .titleMobile,
+header .dropdown {
   display: none;
 }
 
@@ -127,7 +212,11 @@ main .bar .title .subtitle {
   margin-top: 2%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+main .bar .title .subtitle h2:last-child {
+  font-family: "brushJapanese", sans-serif;
+  font-size: 2rem;
 }
 main .bar p {
   position: relative;
@@ -211,6 +300,7 @@ footer #socialMediaMobile {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
   }
   header {
     display: grid;
@@ -220,7 +310,7 @@ footer #socialMediaMobile {
     justify-content: center;
     align-items: center;
     position: inherit;
-    width: 100vw;
+    width: 100%;
     height: 18vh;
     transition: all 0.5s ease;
   }
@@ -309,7 +399,7 @@ footer #socialMediaMobile {
   .dropContent {
     position: absolute;
     background-color: #00040d;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     display: flex;
@@ -317,14 +407,14 @@ footer #socialMediaMobile {
     justify-content: center;
     flex-direction: column;
     display: none;
-    margin-top: 30%;
+    margin-top: 34%;
     transition: all 0.5s ease;
   }
   .dropContent a {
     color: #fafafa;
     font-size: 1rem;
     width: 100%;
-    padding: 12px 16px;
+    padding: 4% 0%;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -345,18 +435,22 @@ footer #socialMediaMobile {
     text-align: center;
     width: 61%;
     line-height: 4rem;
-    font-size: 3.1rem;
+    font-size: 3rem;
   }
   main .bar .title .subtitle {
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
+    align-items: center;
   }
   main .bar .title .subtitle h2 {
     font-size: 1rem;
   }
   main .bar .title .subtitle h2:first-child {
     font-size: 2.2rem;
+  }
+  main .bar .title .subtitle h2:last-child {
+    font-size: 1.5rem;
   }
   main .content {
     flex-direction: column;
@@ -411,7 +505,20 @@ footer #socialMediaMobile {
     font-size: 1.5rem;
     margin: 0 1rem;
   }
-  footer h1, footer p {
+  footer #socialMediaMobile button:hover .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer #socialMediaMobile button:hover .fa-facebook {
+    background: #2372a3;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer h1,
+  footer p {
     color: #fafafa;
     font-size: 1rem;
   }
