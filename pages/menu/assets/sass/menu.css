@@ -23,8 +23,8 @@
   src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
 }
 @font-face {
-  font-family: "japaneseHandWriting";
-  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+  font-family: "brushJapanese";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
 }
 html {
   scroll-behavior: smooth;
@@ -303,7 +303,7 @@ main .plateInfo .plateJapanese {
   justify-content: space-evenly;
 }
 main .plateInfo .plateJapanese p {
-  font-family: "chikaraJP-Regular", sans-serif;
+  font-family: "brushJapanese", sans-serif;
   font-size: 5rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -825,6 +825,7 @@ footer p {
     background-repeat: repeat;
     background-size: initial;
     position: relative;
+    overflow-x: hidden;
   }
   main .buttonsMenu .listPlates {
     position: relative;
@@ -850,7 +851,7 @@ footer p {
   }
   main .buttonsMenu .listPlates li:nth-child(even) button {
     color: #fafafa !important;
-    width: 40%;
+    width: 50%;
   }
   main .buttonsMenu .listPlates li:nth-child(even) button::after {
     background: #fafafa !important;
@@ -871,7 +872,8 @@ footer p {
   }
   main .plates #spicyMiso .plateInfo .platePrice {
     display: flex;
-    padding-right: 4.5%;
+    padding-right: 1.5%;
+    padding-left: 2%;
     align-items: center;
   }
   main .plates #spicyMiso .plateInfo .platePrice .platePriceUL {
@@ -903,7 +905,6 @@ footer p {
     justify-content: center;
     align-items: center;
     padding: 0;
-    padding-right: 4%;
   }
   main .plates .plate .plateName h1 {
     line-height: 100%;
@@ -924,7 +925,7 @@ footer p {
     align-items: center;
     padding-left: 3%;
     padding-right: 3%;
-    width: 89%;
+    width: 94%;
     font-size: 81%;
     text-align: justify;
   }
@@ -946,7 +947,7 @@ footer p {
     justify-content: center;
     align-items: center;
     font-size: 70%;
-    width: 89%;
+    width: 94%;
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 0;
@@ -1002,7 +1003,7 @@ footer p {
     grid-template-rows: repeat(6, minmax(min-content, max-content));
     grid-template-columns: 100%;
     padding-top: 0;
-    padding-left: 3%;
+    padding-left: 5%;
     padding-right: 3%;
     padding-bottom: 0;
     margin: 0;

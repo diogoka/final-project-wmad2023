@@ -29,8 +29,8 @@
 }
 
 @font-face {
-    font-family: "japaneseHandWriting";
-    src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+    font-family: "brushJapanese";
+    src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
 }
 
 $font-main-EN-regular: "chikaraEN-Regular", sans-serif;
@@ -40,6 +40,7 @@ $font-main-JP-bold: "chikaraJP-Bold", sans-serif;
 $font-main-JP-handwriting: "brat", sans-serif;
 $font-main-NUM-handwriting: "numberHandWriting", sans-serif;
 $font-main-JAP-handwriting: "japaneseHandWriting", sans-serif;
+$font-menu-brushJP: "brushJapanese", sans-serif;
 
 $color-main: #00040d;
 $color-main-light: #fafafa;
@@ -387,7 +388,7 @@ main {
             justify-content: space-evenly;
 
             p {
-                font-family: $font-main-JP-regular;
+                font-family: $font-menu-brushJP;
                 font-size: 5rem;
                 writing-mode: vertical-rl;
                 text-orientation: upright;
@@ -1062,6 +1063,7 @@ footer {
             background-repeat: repeat;
             background-size: initial;
             position: relative;
+            overflow-x: hidden;
 
             .listPlates {
                 position: relative;
@@ -1095,7 +1097,7 @@ footer {
                 li:nth-child(even) {
                     button {
                         color: $color-main-light !important;
-                        width: 40%;
+                        width: 50%;
                     }
 
                     button::after {
@@ -1134,7 +1136,8 @@ footer {
                         display: flex;
 
                         padding: {
-                            right: 4.5%;
+                            right: 1.5%;
+                            left: 2%
                         }
 
                         ;
@@ -1178,7 +1181,6 @@ footer {
                     justify-content: center;
                     align-items: center;
                     padding: 0;
-                    padding-right: 4%;
 
                     h1 {
                         line-height: 100%;
@@ -1201,14 +1203,11 @@ footer {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
                         padding: {
                             left: 3%;
                             right: 3%;
-                        }
-
-                        ;
-                        width: 89%;
+                        };
+                        width: 94%;
                         font-size: 81%;
                         text-align: justify;
                     }
@@ -1234,7 +1233,7 @@ footer {
                         justify-content: center;
                         align-items: center;
                         font-size: 70%;
-                        width: 89%;
+                        width: 94%;
                         ;
 
                         padding: {
@@ -1318,7 +1317,7 @@ footer {
 
                 padding: {
                     top: 0;
-                    left: 3%;
+                    left: 5%;
                     right: 3%;
                     bottom: 0;
                 }
@@ -1695,14 +1694,5 @@ footer {
                 }
             }
         }
-
-
-
-
     }
-
-
-
-
-
 }
