@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "chikaraEN-Regular";
+    src: url("../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "chikaraEN-Regular", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 92.5vh 7.5vh;
+  /* grid-template-areas: "header menu" "copyright copyright"; */
+}
+
+header {
+  display: grid;
+  grid-template-rows: 40% 33% 25%;
+  position: fixed;
+  background-color: #00040d;
+  height: 100vh;
+  width: 20vw;
+  grid-area: header;
+}
+header button {
+  background-color: #00040d;
+  font-family: "brat", sans-serif;
+  border: none;
+  color: #fafafa;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 0;
+}
+header .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  cursor: pointer;
+}
+header .buttons button:hover {
+  color: #00308F;
+}
+header .logo {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .socialMedia {
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
+  gap: 2rem;
+}
+
+header .socialMedia i {
+  font-size: 2rem;
+  color: white;
+  /* margin: auto; */
+}
+
+
+
+main {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    /* position: relative; */
+    background-color: #fafafa;
+    /* grid-area: menu; */
+    /* background-size: cover;      */
+    height: 92.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+main h3, main h1 {
+    font-weight: bold;
+    margin: 1em 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 3em;
+}
+
+main p {
+    text-align: center;
+    font-weight: bold;
+}
+.main-top p {
+    font-style: italic;
+    font-size: larger;
+}
+
+.main-top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./imsges/delivery5.jpg");
+    background-color:rgba(255,255,255,0.4);
+    background-blend-mode:lighten;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 88%;
+    margin: 3% auto 3% auto;
+}
+
+.description {
+    padding-top: 4%;
+    border-top: 0.5px solid #767676;
+}
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button p {
+    margin-top: 2.5em;
+    color: #767676;
+}
+
+button {
+    display: block;
+    padding: 2em 2.5em;
+    margin: auto;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid;
+    font-weight: bolder;
+}
+
+.button span {
+    font-style: italic;
+} 
+
+.doordash :hover  {
+    background-color: black;
+    color: white;
+    transition-duration: 1s;
+}
+
+.ubereats :hover  {
+    background-color: black;
+    color: white;
+    transition-duration: 1s;
+}
+
+
+footer {
+    /* position: relative; */
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-area: copyright; */
+    background-color: #00040d;
+    color: #fafafa;
+    /* height: 8vh; */
+    width: 100%;
+}
+  footer h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+  }
+  footer p {
+    font-family: "brat", sans-serif;
+    font-size: 2.5rem;
+    padding-top: 4%;
+  }
+  /*# sourceMappingURL=menu.css.map */
