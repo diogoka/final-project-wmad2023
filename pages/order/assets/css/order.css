@@ -4,8 +4,35 @@
     format("truetype");
 }
 @font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
   font-family: "brat";
   src: url("../../../../assets/fonts/Brat.ttf");
+}
+@font-face {
+  font-family: "numberHandWriting";
+  src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+@font-face {
+  font-family: "brushJapanese";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.no-transition * {
+  transition: none !important;
 }
 
 *,
@@ -221,6 +248,10 @@ main p {
   margin: 3% auto 3% auto;
 }
 
+.smartphone {
+  display: none;
+}
+
 .description {
   padding-top: 4%;
   border-top: 0.5px solid #767676;
@@ -234,7 +265,7 @@ main .buttons {
 }
 
 .button p {
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   color: #767676;
 }
 
@@ -294,3 +325,268 @@ footer p {
   padding-top: 4%;
 }
 /*# sourceMappingURL=menu.css.map */
+
+
+
+@media only screen and (max-width: 390px) {
+  body {
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    width: 100%;
+    height: 18vh;
+    transition: all 0.5s ease;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  header .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo img {
+    width: 72%;
+  }
+  header .titleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9%;
+  }
+  header .titleMobile h1 {
+    font-family: "brat", sans-serif;
+    color: #fafafa;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  header .socialMedia,
+  header .buttons {
+    display: none;
+  }
+  header .dropdown {
+    position: relative;
+    display: inline;
+    padding-right: 1%;
+    transition: all 0.5s ease;
+  }
+  header .nav-button {
+    position: relative;
+    height: 2.4rem;
+    width: 2.8rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #fafafa;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.25s cubic-bezier(0.17, 0.67, 0.89, 1.4);
+    transition-property: transform;
+    will-change: transform;
+  }
+  header .nav-button::before,
+  header .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 5px;
+    background: currentColor;
+    transition: 0.25s;
+    transition-property: transform, top;
+    will-change: transform, top;
+  }
+  header .nav-button::before {
+    top: 0;
+  }
+  header .nav-button::after {
+    top: calc(100% - 4px);
+  }
+  header .transform2:before {
+    width: 60%;
+    transform: rotate(-45deg) translate3d(-48%, 0, 0);
+  }
+  header .transform1:after {
+    width: 60%;
+    transform: rotate(45deg) translate3d(-48%, 0, 0);
+  }
+  .dropContent {
+    position: absolute;
+    background-color: #00040d;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    margin-top: 34%;
+    transition: all 0.5s ease;
+  }
+  .dropContent a {
+    color: #fafafa;
+    font-size: 1rem;
+    width: 100%;
+    padding: 4% 0%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropContent a:hover {
+    background-color: #fafafa;
+    color: #00040d;
+  }
+  
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+/* main {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  position: relative;
+  background-color: #fafafa;
+  grid-area: menu;
+  background-size: cover;     
+  height: 92.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+} */
+
+  .main-top {
+    font-size: 0.5em;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main-top h1 {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+  /* .pc {
+    display: none;
+  } */
+
+
+
+  .description  {   
+    font-size: 0.7em;
+    line-height: 3em;
+  }
+
+  .smartphone {
+    display: block;
+  }
+
+  .main-bottom h3 {
+    font-size: 1.3em;
+  }
+
+  .buttons {
+    font-size: 0.5em;
+  }
+
+  .doordash button, 
+  .ubereats button {
+    padding: 3em 6em;
+  }
+
+  .button p {
+    margin-top: 3em;
+    font-size: 0.3em;
+  }
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #00040d;
+    gap: 16%;
+    height: 13vh;
+  }
+  footer #socialMediaMobile {
+    display: block;
+    margin-bottom: 4%;
+    padding-top: 1%;
+  }
+  footer #socialMediaMobile button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  footer #socialMediaMobile button i {
+    color: #fafafa;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+  footer #socialMediaMobile button:hover .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer #socialMediaMobile button:hover .fa-facebook {
+    background: #2372a3;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer h1,
+  footer p {
+    color: #fafafa;
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 1.7rem;
+  }
+}
