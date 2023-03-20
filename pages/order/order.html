@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <title>Order</title>
 </head>
-<body>
-<header>
-    <div class="logo">
-        <a href="../../index.html">
-            <img src="../../assets/images/logo.jpg" alt="logo">
-        </a>
+<body class="no-transition">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
     </div>
-    <div class="buttons">
+    <header>
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <div class="buttons">
             <div class="buttonHeader" id="aboutUsButton">
-                <button type="button" onclick="window.location.href='../aboutUs/about.html';">About Us</button>
+                <button type="button">About Us</button>
                 <div class="lines">
                     <div class="lineEffect lineEffect1"></div>
                     <div class="lineEffect lineEffect2"></div>
@@ -35,10 +38,9 @@
                     <div class="lineEffect lineEffect12"></div>
                     <div class="lineEffect lineEffect13"></div>
                 </div>
-
             </div>
-            <div class="buttonHeader" onclick="window.location.href='../menu/menu.html';" id="menuButton">
-                <button id="buttonMenu">Menu</button>
+            <div class="buttonHeader" id="menuButton">
+                <button id="buttonMenu" onclick="window.location.href='../menu/menu.html';">Menu</button>
                 <div class="lines">
                     <div class="lineEffect lineEffect1"></div>
                     <div class="lineEffect lineEffect2"></div>
@@ -54,10 +56,10 @@
                     <div class="lineEffect lineEffect12"></div>
                     <div class="lineEffect lineEffect13"></div>
                 </div>
-
+        
             </div>
             <div class="buttonHeader" id="orderButton">
-                <button type="button">Order</button>
+                <button type="button" onclick="window.location.href='../order/order.html';">Order</button>
                 <div class="lines">
                     <div class="lineEffect lineEffect1"></div>
                     <div class="lineEffect lineEffect2"></div>
@@ -75,41 +77,61 @@
                 </div>
             </div>
         </div>
-    <div class="socialMedia">
-        <button><i class="fab fa-facebook-f"></i></button>
-        <button><i class="fab fa-instagram"></i></button>
+        <div class="socialMedia">
+            <button><i class="fab fa-facebook-f"></i></button>
+            <button><i class="fab fa-instagram"></i></button>
+        </div>
+        <div class="titleMobile">
+            <h1>Tsukiya</h1>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton nav-button" type="button" id="toggle-button" aria-label="open/close navigation">
+        </div>
+    </header>
+    <div class="dropContent">
+        <a href="../../index.html">Home</a>
+        <a href="../aboutUs/about.html">About Us</a>
+        <a href="../menu/menu.html">Menu</a>
+        <a href="../order/order.html">Order</a>
     </div>
-</header>
-<main>
-    <div class="main-top">
-        <h1>TAKE OUT OR DELIVERY</h1>
-        <p>COME PICKUP FROM US OR HAVE OUR DELIVERY PARTNER COME TO YOU</p>
-    </div>
-    <div class="main-bottom">
-        <p class ="description">WE'RE HAPPY TO OFFER LOTS OF WAYS TO GET OUR DELICIOUS FOOD TO YOUR TABLE <br>
-            CHOOSE ONE OF THE OPTIONS BELOW FOR DELIVERY OR ORDER AHEAD TO PICKUP AND PAY IN PERSON.
-        </p>
-        <h3>DELIVERY</h3>
-        <div class="buttons">
-            <div class="button">
-                <div class="doordash">
-                    <button type="button" onclick="location.href='https://www.doordash.com'">DOORDASH</button>
+    <main>
+        <div class="main-top">
+            <h1>TAKE OUT OR DELIVERY</h1>
+            <p>COME PICKUP FROM US OR HAVE OUR DELIVERY PARTNER COME TO YOU</p>
+        </div>
+        <div class="main-bottom">
+            <p class ="description">
+                WE'RE HAPPY TO OFFER LOTS OF WAYS<br class="smartphone"> TO GET OUR DELICIOUS FOOD TO YOUR TABLE. <br class="pc">
+                CHOOSE ONE OF THE OPTIONS BELOW FOR DELIVERY<br class="smartphone"> OR ORDER AHEAD TO PICKUP AND PAY IN PERSON.
+            </p>
+            <h3>DELIVERY</h3>
+            <div class="buttons">
+                <div class="button">
+                    <div class="doordash">
+                        <button type="button" onclick="location.href='https://www.doordash.com'">DOORDASH</button>
+                    </div>
+                    <p>Order via our delivery partner<br class="smartphone"> DoorDash <br>
+                       <span>(additional fees may apply)</span> 
+                    </p>
                 </div>
-                <p>Order via our delivery partner DoorDash <br>
-                   <span>(additional fees may apply)</span> 
-                </p>
-            </div>
-            <div class="button">
-                <div class="ubereats">
-                    <button type="button" onclick="location.href='https://www.ubereats.com/ca/feed?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlZhbmNvdXZlciUyMFB1YmxpYyUyMExpYnJhcnklMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIxMTQ2MTZhOS1iYTVkLTY2YWYtM2ZlNS1hY2EyM2Q0YWY1NTQlMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ5LjI3OTk1NzYlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIzLjExNDc3MDUlN0Q%3D'">UBER EATS</button>
-                </div> 
-                <p>Order via our delivery partner UberEats <br>
-                    <span>(additional fees may apply)</span>
-                </p>
+                <div class="button">
+                    <div class="ubereats">
+                        <button type="button" onclick="location.href='https://www.ubereats.com/ca/feed?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlZhbmNvdXZlciUyMFB1YmxpYyUyMExpYnJhcnklMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjIxMTQ2MTZhOS1iYTVkLTY2YWYtM2ZlNS1hY2EyM2Q0YWY1NTQlMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ5LjI3OTk1NzYlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIzLjExNDc3MDUlN0Q%3D'">UBER EATS</button>
+                    </div> 
+                    <p>Order via our delivery partner<br class="smartphone"> UberEats <br>
+                        <span>(additional fees may apply)</span>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</main>
-<footer>
-    <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
-</footer>
+    </main>
+    <footer>
+        <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
+    </footer>
+</body>
+
+
+<script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>
+<script src="./assets/js/order.js"></script>
+
+</html>
