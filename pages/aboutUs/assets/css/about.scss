@@ -222,17 +222,19 @@ main {
 
             h1 {
                 font-family: $font-main-JP-handwriting;
+                font-weight: 100;
                 color: $color-main-light;
                 position: relative;
                 font-size: 6.8rem;
                 display: grid;
                 align-content: end;
-                justify-content: start;
+                justify-content: center;
                 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             }
 
             h2 {
                 font-family: $font-main-JP-handwriting;
+                font-weight: 100;
                 font-size: 2.7rem;
             }
 
@@ -244,6 +246,7 @@ main {
 
                 h2:last-child {
                     font-family: $font-menu-brushJP;
+                    font-weight: 100;
                     font-size: 2rem;
                 }
             }
@@ -404,7 +407,7 @@ footer {
 //Responsiveness
 
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 1077px) {
     body {
         transition: all 0.5s ease;
         display: flex;
@@ -686,6 +689,7 @@ footer {
         p {
             color: $color-main-light;
             font-size: 1rem;
+            font-weight: 100;
         }
 
         p {

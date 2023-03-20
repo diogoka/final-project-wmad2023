@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "chikaraEN-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraEN-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Regular";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "chikaraJP-Bold";
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "brat";
+  src: url("../../../../assets/fonts/Brat.ttf");
+}
+@font-face {
+  font-family: "numberHandWriting";
+  src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
+}
+@font-face {
+  font-family: "brushJapanese";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
+}
+body {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-areas: "header content";
+}
+
+main {
+  position: relative;
+  background-color: #fafafa;
+  grid-area: content;
+}
+main .bar {
+  position: relative;
+  height: 100%;
+}
+main .bar .title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  gap: 3rem;
+}
+main .bar .title h1 {
+  font-family: "brat", sans-serif;
+  font-weight: 100;
+  color: #00040d;
+  position: relative;
+  font-size: 6.8rem;
+  display: grid;
+  align-content: end;
+  justify-content: start;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+main .bar .buttonsBar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  gap: 15%;
+}
+main .bar .buttonsBar .buttonBar {
+  transition: 1s;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 1rem;
+  background-color: #fafafa;
+  color: #00040d;
+  border: none;
+}
+main .bar .buttonsBar .buttonBar:hover {
+  background-color: #00040d;
+  color: #fafafa;
+}
+main .bar::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/images/background-image.jpg");
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+footer .footerMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1036px) {
+  body {
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+    width: 100%;
+    height: 18vh;
+    transition: all 0.5s ease;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  header .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo img {
+    width: 72%;
+  }
+  header .titleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9%;
+  }
+  header .titleMobile h1 {
+    font-family: "brat", sans-serif;
+    color: #fafafa;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  header .socialMedia,
+  header .buttons {
+    display: none;
+  }
+  header .dropdown {
+    position: relative;
+    display: inline;
+    padding-right: 1%;
+    transition: all 0.5s ease;
+  }
+  header .nav-button {
+    position: relative;
+    height: 2.4rem;
+    width: 2.8rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, currentColor, currentColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #fafafa;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.25s cubic-bezier(0.17, 0.67, 0.89, 1.4);
+    transition-property: transform;
+    will-change: transform;
+  }
+  header .nav-button::before,
+  header .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 5px;
+    background: currentColor;
+    transition: 0.25s;
+    transition-property: transform, top;
+    will-change: transform, top;
+  }
+  header .nav-button::before {
+    top: 0;
+  }
+  header .nav-button::after {
+    top: calc(100% - 4px);
+  }
+  header .transform2:before {
+    width: 60%;
+    transform: rotate(-45deg) translate3d(-48%, 0, 0);
+  }
+  header .transform1:after {
+    width: 60%;
+    transform: rotate(45deg) translate3d(-48%, 0, 0);
+  }
+  .dropContent {
+    position: absolute;
+    background-color: #00040d;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    margin-top: 34%;
+    transition: all 0.5s ease;
+  }
+  .dropContent a {
+    color: #fafafa;
+    font-size: 1rem;
+    width: 100%;
+    padding: 4% 0%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dropContent a:hover {
+    background-color: #fafafa;
+    color: #00040d;
+  }
+  main .bar {
+    height: 44vh;
+  }
+  main .bar .title {
+    padding-top: 9rem;
+  }
+  main .bar .title h1 {
+    font-size: 3.2rem;
+    font-weight: 100;
+  }
+  main .bar .buttonBar {
+    display: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  footer .footer-left h3 {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  footer .footer-left .business-hour {
+    display: grid;
+    grid-template-columns: 30vw 50vw;
+    grid-template-rows: 50% 50%;
+    row-gap: 6px;
+    padding-left: 11px;
+    padding-bottom: 1rem;
+  }
+  footer .footer-right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-areas: "address map";
+  }
+  footer .footer-right .restaurant-information {
+    width: 100%;
+    grid-area: address;
+  }
+  footer .footer-right .restaurant-information h3 {
+    padding-left: 0.4rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  footer .footer-right .vistUs {
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  footer .footer-right .vistUs h3 {
+    display: none;
+  }
+  footer .footer-right .vistUs .map {
+    margin-top: 1.4rem;
+  }
+  footer .footer-right .vistUs .map iframe {
+    width: 11rem;
+  }
+  footer .footerMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  footer .footerMobile h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    font-size: 1rem;
+  }
+  footer .footerMobile p {
+    font-family: "brat", sans-serif;
+    font-size: 2rem;
+    padding-top: 4%;
+  }
+  footer .footerMobile #socialMediaMobile {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  footer .footerMobile #socialMediaMobile button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  footer .footerMobile #socialMediaMobile button i {
+    color: #fafafa;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+  footer .footerMobile #socialMediaMobile button:hover .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer .footerMobile #socialMediaMobile button:hover .fa-facebook {
+    background: #2372a3;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}/*# sourceMappingURL=index.css.map */

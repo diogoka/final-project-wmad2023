@@ -1,41 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/homepage.css">
+    <link rel="stylesheet" href="./assets/css/homepage.css">
     <link rel="icon" type="image/x-icon" href="../../assets/icons/logo.ico">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <title>Home</title>
 </head>
-<body>
+
+<body class="no-transition">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
     <header>
-        <div class ="logo">
-            <img src="../assets/images/logo.jpg" alt="">    
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../assets/images/logo.jpg" alt="logo">
+            </a>
         </div>
         <div class="buttons">
-            <button type="button" onclick="window.location.href='../aboutUs/about.html';">About Us</button>
-            <button type="button" onclick="window.location.href='../menu/menu.html';">Menu</button>
-            <button id="buttonOrder">Order</button>
+            <div class="buttonHeader" id="aboutUsButton">
+                <button type="button" onclick="window.location.href='./pages/aboutUs/about.html';">About Us</button>
+                <div class="lines">
+                    <div class="lineEffect lineEffect1"></div>
+                    <div class="lineEffect lineEffect2"></div>
+                    <div class="lineEffect lineEffect3"></div>
+                    <div class="lineEffect lineEffect4"></div>
+                    <div class="lineEffect lineEffect5"></div>
+                    <div class="lineEffect lineEffect6"></div>
+                    <div class="lineEffect lineEffect7"></div>
+                    <div class="lineEffect lineEffect8"></div>
+                    <div class="lineEffect lineEffect9"></div>
+                    <div class="lineEffect lineEffect10"></div>
+                    <div class="lineEffect lineEffect11"></div>
+                    <div class="lineEffect lineEffect12"></div>
+                    <div class="lineEffect lineEffect13"></div>
+                </div>
+
+            </div>
+            <div class="buttonHeader" id="menuButton">
+                <button id="buttonMenu" onclick="window.location.href='./pages/menu/menu.html';">Menu</button>
+                <div class="lines">
+                    <div class="lineEffect lineEffect1"></div>
+                    <div class="lineEffect lineEffect2"></div>
+                    <div class="lineEffect lineEffect3"></div>
+                    <div class="lineEffect lineEffect4"></div>
+                    <div class="lineEffect lineEffect5"></div>
+                    <div class="lineEffect lineEffect6"></div>
+                    <div class="lineEffect lineEffect7"></div>
+                    <div class="lineEffect lineEffect8"></div>
+                    <div class="lineEffect lineEffect9"></div>
+                    <div class="lineEffect lineEffect10"></div>
+                    <div class="lineEffect lineEffect11"></div>
+                    <div class="lineEffect lineEffect12"></div>
+                    <div class="lineEffect lineEffect13"></div>
+                </div>
+
+            </div>
+            <div class="buttonHeader" id="orderButton">
+                <button type="button" onclick="window.location.href='./pages/order/order.html';">Order</button>
+                <div class="lines">
+                    <div class="lineEffect lineEffect1"></div>
+                    <div class="lineEffect lineEffect2"></div>
+                    <div class="lineEffect lineEffect3"></div>
+                    <div class="lineEffect lineEffect4"></div>
+                    <div class="lineEffect lineEffect5"></div>
+                    <div class="lineEffect lineEffect6"></div>
+                    <div class="lineEffect lineEffect7"></div>
+                    <div class="lineEffect lineEffect8"></div>
+                    <div class="lineEffect lineEffect9"></div>
+                    <div class="lineEffect lineEffect10"></div>
+                    <div class="lineEffect lineEffect11"></div>
+                    <div class="lineEffect lineEffect12"></div>
+                    <div class="lineEffect lineEffect13"></div>
+                </div>
+            </div>
         </div>
         <div class="socialMedia">
-            <button><i class="fab fa-facebook-f"></i></button>
-            <button><i class="fab fa-instagram"></i></button>
+            <button><i class="fa fa-facebook"></i></button>
+            <button><i class="fa fa-instagram"></i></button>
         </div>
+
+        <div class="titleMobile">
+            <h1>Tsukiya</h1>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton nav-button" type="button" id="toggle-button" aria-label="open/close navigation">
+        </div>
+
+
     </header>
+    <div class="dropContent">
+        <a href="../../index.html">Home</a>
+        <a href="../aboutUs/about.html">About Us</a>
+        <a href="../menu/menu.html">Menu</a>
+        <a href="../order/order.html">Order</a>
+    </div>
     <main>
-        <h1>Tonkotsu Ramen Tsukiya</h1>
-        <div class ="buttons in-main">
-            <div class="buttonInMain">
-                <button onclick="location.href='URL'">ABOUT US</button>
+        <div class="bar">
+            <div class="title">
+                <h1>Tonkotsu Ramen</h1>
+                <h1>Tsukiya</h1>
             </div>
-            <div class="buttonInMain">
-                <button onclick="location.href='URL'">MENU</button>
-            </div>
-            <div class="buttonInMain">
-                <button onclick="location.href='URL'">ORDER</button>
+            <div class="buttonsBar">
+                <button class="buttonBar" type="button"
+                    onclick="window.location.href='./pages/aboutUs/about.html';">ABOUT US</button>
+                <button class="buttonBar" onclick="window.location.href='./pages/menu/menu.html';">MENU</button>
+                <button class="buttonBar" type="button"
+                    onclick="window.location.href='./pages/order/order.html';">ORDER</button>
             </div>
         </div>
     </main>
@@ -43,7 +120,7 @@
         <div class="footer-left">
             <h3>WE ARE OPEN</h3>
             <div class="business-hour">
-                <div class ="days1">
+                <div class="days1">
                     <p>Monday </p>
                     <p>Tuesday </p>
                     <p>Wednesday </p>
@@ -67,23 +144,37 @@
                 </div>
             </div>
         </div>
-    <div class="footer-right">
-        <div class ="restaurant-information">
-            <h3>RESTAURANT</h3>
-            <P class ="address">740 Denman St, <br>
-                Vancouver,<br>
-                BC V6G 2L5
-            </P>
-            <p class ="contact">E-mail: <a href="mailto:email@tsukiya.ca">email@tsukiya.ca</a></p>
-            <p class ="contact">Phone:<a href="tel">(604) 609-0310</a></p>
-        </div>
-        <div class="vistUs">      
-            <h3>VISIT US</h3>
-            <div class ="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10408.741824863713!2d-123.1345429!3d49.2918299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867140aa7b2c0b%3A0x21c608775f6f8448!2sTonkotsu%20Ramen%20Tsukiya!5e0!3m2!1sen!2sca!4v1678675820849!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-right">
+            <div class="restaurant-information">
+                <h3>RESTAURANT</h3>
+                <P class="address">740 Denman St,
+                    Vancouver,
+                    BC V6G 2L5
+                </P>
+                <p class="contact">E-mail: <a href="mailto:email@tsukiya.ca">email@tsukiya.ca</a></p>
+                <p class="contact">Phone:<a href="tel">(604) 609-0310</a></p>
             </div>
+            <div class="vistUs">
+                <h3>VISIT US</h3>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10408.741824863713!2d-123.1345429!3d49.2918299!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867140aa7b2c0b%3A0x21c608775f6f8448!2sTonkotsu%20Ramen%20Tsukiya!5e0!3m2!1sen!2sca!4v1678675820849!5m2!1sen!2sca"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
+        <div class="footerMobile">
+            <h1>&#169;Copyright <p>Tsukiya</p>2023</h1>
+            <div class="socialMedia" id="socialMediaMobile">
+                <button><i class="fa fa-facebook"></i></button>
+                <button><i class="fa fa-instagram"></i></button>
+            </div>
+        </div>
+
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/65077a475d.js" crossorigin="anonymous"></script>
+<script src="./assets/js/index.js"></script>
+
 </html>
