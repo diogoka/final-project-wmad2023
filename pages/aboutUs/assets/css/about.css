@@ -200,16 +200,18 @@ main .bar .title {
 }
 main .bar .title h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   color: #fafafa;
   position: relative;
   font-size: 6.8rem;
   display: grid;
   align-content: end;
-  justify-content: start;
+  justify-content: center;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 main .bar .title h2 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   font-size: 2.7rem;
 }
 main .bar .title .subtitle {
@@ -220,6 +222,7 @@ main .bar .title .subtitle {
 }
 main .bar .title .subtitle h2:last-child {
   font-family: "brushJapanese", sans-serif;
+  font-weight: 100;
   font-size: 2rem;
 }
 main .bar p {
@@ -344,7 +347,7 @@ footer #socialMediaMobile {
   background-position: center;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 1077px) {
   body {
     transition: all 0.5s ease;
     display: flex;
@@ -572,6 +575,7 @@ footer #socialMediaMobile {
   footer p {
     color: #fafafa;
     font-size: 1rem;
+    font-weight: 100;
   }
   footer p {
     font-size: 1.7rem;

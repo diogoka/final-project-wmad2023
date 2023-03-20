@@ -1,22 +1,22 @@
 @font-face {
-    font-family: "ramenRegular";
-    src: url(../fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf) format("truetype");
-}
-@font-face {
   font-family: "chikaraEN-Regular";
-  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Rg.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "chikaraEN-Bold";
-  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "chikaraJP-Regular";
-  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "chikaraJP-Bold";
-  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "brat";
@@ -27,225 +27,319 @@
   src: url("../../../../assets/fonts/numbers/LeochNisa-512LV.ttf");
 }
 @font-face {
-  font-family: "japaneseHandWriting";
-  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.textClipping.ttf");
+  font-family: "brushJapanese";
+  src: url("../../../../assets/fonts/851CHIKARA-DZUYOKU_kanaA_004.ttf");
 }
 
+:root {
+  --color-main: #00040d;
+  --color-main-light: #fafafa;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.no-transition * {
+  transition: none !important;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "chikaraEN-Regular", sans-serif;
 }
 
 body {
-    font-family: "ramenRegular";
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 80% 20%;
-    margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 80% 20%;
+  margin: 0;
 }
 
 header {
-    grid-column: 1/2;
-    grid-row: 1/-1;
-    background-color: black;
-    /* height: auto; */
-    /* padding: 0; */
-    /* width: 20%; */
-    /* position: fixed; */
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #00040d;
+  height: 100%;
+  width: 20%;
+  grid-area: header;
+  z-index: 1;
 }
-
-.logo {
-    margin: 0;
-    display: flex;
-    justify-content: center;
+header button {
+  background-color: #00040d;
+  font-family: "brat", sans-serif;
+  border: none;
+  color: #fafafa;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
-
-/* .logo img {
+header .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3rem;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 9px;
 }
-
-.buttons {
-} */
-
-.buttons button {
-    color: white;
-    /* font-size: x-large; */
-    font-size: 3rem;
-    margin-bottom: 70px;
-    display: block;
-    margin: 1.8em auto;
-    background-color: black;
-    border:none;
-    font-family: "brat", sans-serif;
-    color: #fafafa;
+header .buttons .lines {
+  height: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 18px 84px 21px 75px;
 }
-
-button {
-    cursor: pointer;
+header .buttons .lines .lineEffect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fafafa;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms;
+  border-radius: 86% 4% 80% 40%;
 }
-
-.sns-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
+header .buttons .lines .lineEffect1 {
+  height: 1.5px;
 }
-
-.fab {
-    font-size: xx-large;
-    color: white;
+header .buttons .lines .lineEffect2 {
+  height: 1.5px;
 }
-
-main {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    width: 100%;
-    height: 100%;
-    /* margin: 0 auto; */
-    background-image: url("/assets/images/background-image.jpg");
-    background-size: cover;
-    color: black;
-    display: flex;
-    flex-direction: column;
+header .buttons .lines .lineEffect3 {
+  height: 1.5px;
 }
-
-main h1 {
-    font-size: 350%;
-    text-align: center;
-    margin: 2em 0 1.5em 0;
-    font-family: Brush Script MT;
-    color: black;
+header .buttons .lines .lineEffect4 {
+  height: 1.5px;
 }
-
-.button button {
-    font-size: ;
+header .buttons .lines .lineEffect5 {
+  height: 1.5px;
 }
-
-.in-main {
-    width: 70%;
-    display: flex;
-    /* justify-content: center; */
-    margin: 0 auto;
+header .buttons .lines .lineEffect6 {
+  height: 1.5px;
 }
-
-
-.in-main button {
-    color: black;
-    background-color: transparent;
-    font-weight:  bold;
-    /* align-items: center; */
-    /* font-style: italic; */
+header .buttons .lines .lineEffect7 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect8 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect9 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect10 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect11 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect12 {
+  height: 1.5px;
+}
+header .buttons .lines .lineEffect13 {
+  height: 1.5px;
+}
+header .buttonHeader:hover .lineEffect {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+header .logo {
+  padding-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 45px;
+}
+header .socialMedia button {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header .socialMedia button i {
+  font-size: 2rem;
+}
+header .socialMedia button:hover .fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .socialMedia button:hover .fa-facebook {
+  background: #2372a3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .titleMobile,
+header .dropdown {
+  display: none;
 }
 
 footer {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: flex;
-    background-color: black;
-    color: white;
-    /* margin: 1%; */
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0.5em;
-    font-size: small;
-    /* justify-content: space-evenly; */
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  background-color: var(--color-main);
+  color: var(--color-main-light);
+  width: auto;
+  /* height: auto; */
+  margin: 0;
+  padding: 0.5em;
+  font-size: small;
+  padding-top: 2%;
 }
 
 footer h3 {
-    margin: 0 0 10px 0;
-    /* margin-top: 10px; */
-}
-
-footer p {
-    /* margin: 0; */
+  margin: 0 0 10px 0;
 }
 
 .footer-left {
-    /* margin-left: 5%; */
-    /* margin-right: 30px; */
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .business-hour {
-    display: flex;
-    /* justify-content: space-between; */
+  display: flex;
 }
 
-.days1, .days2 {
-    padding-right: 1.2em;
+.days1,
+.days2 {
+  padding-right: 1.2em;
 }
 
-.days1 p, .days2 p {
-    padding-top: 5px;
+.days1 p,
+.days2 p {
+  padding-top: 5px;
 }
 
 .hours1 {
-    padding-right: 3em;
+  padding-right: 3em;
 }
 
-.hours1 p, .hours2 p {
-    padding-top: 5px;
-
+.hours1 p,
+.hours2 p {
+  padding-top: 5px;
 }
 
 .footer-right {
-    width: 50%;
-    display: flex;
-    /* justify-content: flex-end; */
+  width: 50%;
+  display: flex;
 }
 
 .restaurant-information {
-    width: 40%;
-    height: 100%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-start; */
+  width: 40%;
+  height: 100%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .restaurant-information a {
-    color: white;
+  color: var(--color-main-light);
 }
 
 .address {
-    line-height: 1.5em;
-    padding-top: 5px;
-
+  line-height: 1.5em;
+  padding-top: 5px;
 }
 
 .contact {
-    display:inline;
-    line-height: 1.5em;
-    letter-spacing:;
+  display: inline;
+  line-height: 1.5em;
 }
 
 .vistUs {
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .map {
-    position: relative;
-    padding: 0;
-    width: 33%;
-    margin: 0;
+  position: relative;
+  padding: 0;
+  width: 33%;
+  margin: 0;
 }
 
 .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 18em;
-    height: 8em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18em;
+  height: 8em;
+}
+
+footer #socialMediaMobile {
+  display: none;
+}
+
+.loader-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 70%;
+  background-color: #00040d;
+  align-items: center;
+  justify-content: center;
+  animation-name: fade;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 70%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 30%;
+  }
+  75% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+.loader {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../../assets/images/logo_s.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
