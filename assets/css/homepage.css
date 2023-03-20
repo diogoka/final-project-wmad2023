@@ -196,7 +196,9 @@ header .socialMedia button:hover .fa-facebook {
 header .titleMobile,
 header .dropdown {
   display: none;
+
 }
+
 
 footer {
   grid-column: 2/3;
