@@ -278,17 +278,35 @@ footer .footerMobile {
     color: #00040d;
   }
   main .bar {
-    height: 44vh;
+    height: 49vh;
   }
   main .bar .title {
-    padding-top: 9rem;
+    padding-top: 6rem;
   }
   main .bar .title h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 100;
   }
-  main .bar .buttonBar {
-    display: none;
+  main .bar .buttonsBar {
+    gap: 2%;
+    font-size: 72%;
+  }
+  main .bar .buttonsBar .homepageBtn {
+    width: 3.5rem;
+    transition: none;
+  }
+  main .bar .buttonsBar .homepageBtn button {
+    letter-spacing: 2px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  main .bar .buttonsBar .homepageBtn::after, main .bar .buttonsBar .homepageBtn::before {
+    border: none;
+  }
+  main .bar .buttonsBar .homepageBtn:hover {
+    opacity: 88%;
+    transition-duration: 1s;
   }
   footer {
     display: flex;

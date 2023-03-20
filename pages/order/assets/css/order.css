@@ -576,7 +576,7 @@ footer p {
     flex-direction: column-reverse;
     background-color: #00040d;
     gap: 16%;
-    height: 13vh;
+    height: 13.5vh;
   }
   footer #socialMediaMobile {
     display: block;
