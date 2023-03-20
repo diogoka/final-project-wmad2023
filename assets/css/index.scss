@@ -76,11 +76,10 @@ main {
                 font-weight: 100;
                 color: $color-main;
                 position: relative;
-                font-size: 6.8rem;
+                font-size: 7rem;
                 display: grid;
                 align-content: end;
                 justify-content: start;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             }
         }
 
@@ -92,26 +91,68 @@ main {
             padding-top: 10%;
             gap: 15%;
 
-            .buttonBar {
-                transition: 1s;
+            .homepageBtn{
+                outline: none;
+                font-weight: bold;
+                font-size: larger;
+                color: black;
+                padding: 10px 30px;
                 position: relative;
-
-                padding: {
-                    top: 1.5rem;
-                    bottom: 1.5rem;
-                    left: 2.5rem;
-                    right: 2.5rem;
-                }
-
-                border-radius: 1rem;
                 background-color: $color-main-light;
-                color: $color-main;
-                border: none;
+                width: 8rem;
+                height: 3rem;
+                cursor: pointer;
+                .buttonBar{
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-main-light;
+                    letter-spacing: 2px;
+                }
+            }
+            .homepageBtn::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 0%;
+                border: 3px solid transparent;
+                box-sizing: border-box;
+                transition: all 1s ease-in-out;
+                border-right: none;
+                border-bottom: none;
+            }
+            .homepageBtn:hover::before{
+                width: 150%;
+                height: 150%;
+                border-color: $color-main;
+                border-right: none;
+                border-bottom: none;
+                transition: all 1s ease-in-out;
             }
 
-            .buttonBar:hover {
-                background-color: $color-main;
-                color: $color-main-light;
+            .homepageBtn::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0%;
+                height: 0%;
+                border: 3px solid transparent;
+                box-sizing: border-box;
+                transition: all 1s ease-in-out;
+                border-left: none;
+                border-top: none;
+            }
+
+            .homepageBtn:hover::after{
+                width: 150%;
+                height: 150%;
+                border-color: $color-main;
+                border-left: none;
+                border-top: none;
+                transition: all 1s ease-in-out;
             }
         }
     }
@@ -119,7 +160,7 @@ main {
     .bar::before {
         content: "";
         position: absolute;
-        background-image: url("../../assets/images/background-image.jpg");
+        background-image: url("../images/back3.jpg");
         top: 0px;
         right: 0px;
         bottom: 0px;

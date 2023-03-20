@@ -55,11 +55,10 @@ main .bar .title h1 {
   font-weight: 100;
   color: #00040d;
   position: relative;
-  font-size: 6.8rem;
+  font-size: 7rem;
   display: grid;
   align-content: end;
   justify-content: start;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 main .bar .buttonsBar {
   position: relative;
@@ -69,26 +68,71 @@ main .bar .buttonsBar {
   padding-top: 10%;
   gap: 15%;
 }
-main .bar .buttonsBar .buttonBar {
-  transition: 1s;
+main .bar .buttonsBar .homepageBtn {
+  outline: none;
+  font-weight: bold;
+  font-size: larger;
+  color: black;
+  padding: 10px 30px;
   position: relative;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  border-radius: 1rem;
   background-color: #fafafa;
-  color: #00040d;
-  border: none;
+  width: 8rem;
+  height: 3rem;
+  cursor: pointer;
 }
-main .bar .buttonsBar .buttonBar:hover {
-  background-color: #00040d;
-  color: #fafafa;
+main .bar .buttonsBar .homepageBtn .buttonBar {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  letter-spacing: 2px;
+}
+main .bar .buttonsBar .homepageBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: all 1s ease-in-out;
+  border-right: none;
+  border-bottom: none;
+}
+main .bar .buttonsBar .homepageBtn:hover::before {
+  width: 150%;
+  height: 150%;
+  border-color: #00040d;
+  border-right: none;
+  border-bottom: none;
+  transition: all 1s ease-in-out;
+}
+main .bar .buttonsBar .homepageBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: all 1s ease-in-out;
+  border-left: none;
+  border-top: none;
+}
+main .bar .buttonsBar .homepageBtn:hover::after {
+  width: 150%;
+  height: 150%;
+  border-color: #00040d;
+  border-left: none;
+  border-top: none;
+  transition: all 1s ease-in-out;
 }
 main .bar::before {
   content: "";
   position: absolute;
-  background-image: url("../../assets/images/background-image.jpg");
+  background-image: url("../images/back3.jpg");
   top: 0px;
   right: 0px;
   bottom: 0px;
