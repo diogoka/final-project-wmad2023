@@ -328,6 +328,9 @@ footer p {
   padding-top: 4%;
   font-weight: 100;
 }
+footer #socialMediaMobile {
+  display: none;
+}
 
 .loader-wrapper {
   display: none;
