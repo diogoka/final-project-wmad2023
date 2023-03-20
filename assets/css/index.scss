@@ -341,19 +341,37 @@ footer {
 
     main {
         .bar {
-            height: 44vh;
+            height: 49vh;
 
             .title {
-                padding-top: 9rem;
+                padding-top: 6rem;
 
                 h1 {
-                    font-size: 3.2rem;
+                    font-size: 3.5rem;
                     font-weight: 100;
                 }
             }
 
-            .buttonBar {
-                display: none;
+            .buttonsBar {
+                gap: 2%;
+                font-size: 72%;
+                .homepageBtn{
+                    width: 3.5rem;
+                    transition: none;
+                    button{
+                        letter-spacing: 2px;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .homepageBtn::after, .homepageBtn::before{
+                    border: none;
+                }
+                .homepageBtn:hover{
+                    opacity: 88%;
+                    transition-duration: 1s;
+                }
             }
         }
 
