@@ -203,6 +203,7 @@ main .bar .menuTitle {
 }
 main .bar .menuTitle h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   position: relative;
   font-size: 8rem;
   grid-area: menu;
@@ -253,7 +254,7 @@ main .buttonsMenu {
   position: sticky;
   top: 0;
   background-color: #c6c6d0;
-  height: 20vh;
+  height: 18vh;
   margin-left: 3%;
   margin-right: 3%;
   box-shadow: 0px 6px 5px #ccc;
@@ -262,6 +263,9 @@ main .buttonsMenu {
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 main .buttonsMenu .misoButton,
 main .buttonsMenu .darkMisoButton,
@@ -323,9 +327,6 @@ main .line {
   justify-content: center;
   margin-top: 1%;
 }
-main .listPlates {
-  padding-top: 3rem;
-}
 main .listPlates li:nth-last-child(-n+3) {
   grid-column: span 2;
 }
@@ -345,6 +346,7 @@ main .plateName {
 }
 main .plateName h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   font-size: 4rem;
 }
 main .plateInfo {
@@ -462,6 +464,7 @@ main .extraTopings .extraTopingsTitle {
 }
 main .extraTopings .extraTopingsTitle h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   font-size: 4rem;
   padding-left: 5%;
   padding-top: 3%;
@@ -527,6 +530,7 @@ main .giozaChasuBits .gioza .chasuInfo h1,
 main .giozaChasuBits .chasuBits .giozaInfo h1,
 main .giozaChasuBits .chasuBits .chasuInfo h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   font-size: 4rem;
 }
 main .giozaChasuBits .gioza .giozaInfo .descriptionGiozaChasu,
@@ -540,6 +544,7 @@ main .giozaChasuBits .gioza .chasuInfo .priceGiozaChasu,
 main .giozaChasuBits .chasuBits .giozaInfo .priceGiozaChasu,
 main .giozaChasuBits .chasuBits .chasuInfo .priceGiozaChasu {
   font-family: "numberHandWriting", sans-serif;
+  font-weight: 100;
   font-size: 2rem;
   color: #00308F;
 }
@@ -576,6 +581,7 @@ main .beverages {
 }
 main .beverages h1 {
   font-family: "brat", sans-serif;
+  font-weight: 100;
   font-size: 4rem;
 }
 main .beverages .promotionBeerGrid {
@@ -787,8 +793,8 @@ footer p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
   opacity: 70%;
   background-color: #00040d;
@@ -875,6 +881,7 @@ footer p {
     color: #fafafa;
     font-size: 3.2rem;
     text-align: center;
+    font-weight: 100;
   }
   header .socialMedia,
   header .buttons {

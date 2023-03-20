@@ -5,15 +5,18 @@
 }
 @font-face {
   font-family: "chikaraEN-Bold";
-  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuEN/LINESeedSans_Bd.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "chikaraJP-Regular";
-  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Rg.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "chikaraJP-Bold";
-  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf") format("truetype");
+  src: url("../../../../assets/fonts/chikaraYowakuJP/LINESeedJP_TTF_Bd.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "brat";
@@ -325,9 +328,53 @@ footer p {
   padding-top: 4%;
   font-weight: 100;
 }
-/*# sourceMappingURL=menu.css.map */
 
+.loader-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  opacity: 70%;
+  background-color: #00040d;
+  align-items: center;
+  justify-content: center;
+  animation-name: fade;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 70%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 30%;
+  }
+  75% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 
+.loader {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../../assets/images/logo_s.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 @media only screen and (max-width: 390px) {
   body {
@@ -460,7 +507,6 @@ footer p {
     background-color: #fafafa;
     color: #00040d;
   }
-  
 
   main {
     display: flex;
@@ -468,7 +514,7 @@ footer p {
     justify-content: flex-start;
     height: auto;
   }
-/* main {
+  /* main {
   grid-column: 2/-1;
   grid-row: 1/2;
   position: relative;
@@ -498,9 +544,7 @@ footer p {
     display: none;
   } */
 
-
-
-  .description  {   
+  .description {
     font-size: 0.7em;
     line-height: 3em;
   }
@@ -517,7 +561,7 @@ footer p {
     font-size: 0.5em;
   }
 
-  .doordash button, 
+  .doordash button,
   .ubereats button {
     padding: 3em 6em;
   }
@@ -526,24 +570,6 @@ footer p {
     margin-top: 3em;
     font-size: 0.3em;
   }
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   footer {
     display: flex;
@@ -571,7 +597,14 @@ footer p {
     margin: 0 1rem;
   }
   footer #socialMediaMobile button:hover .fa-instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
